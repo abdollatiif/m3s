@@ -11,6 +11,6 @@ app.listen(port, function() {
 });
 
 app.get('/', function(req, res) {
-  res.sendfile(app.set('appIndex'));
+  res.sendfile('./public/app.html');
 });
 
