@@ -2,6 +2,8 @@ var express = require('express');
 
 var app = module.exports = express.createServer();
 
+app.set('appIndex', './public/app.html')
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function() {
@@ -9,7 +11,6 @@ app.listen(port, function() {
 });
 
 app.get('/', function(req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
+  res.sendfile(app.set('appIndex'));
 });
 
