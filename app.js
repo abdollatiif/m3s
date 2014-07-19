@@ -2,8 +2,6 @@ var express = require('express');
 
 var app = module.exports = express.createServer();
 
-app.set('appIndex', './public/app.html')
-
 var port = process.env.PORT || 3000;
 
 app.listen(port, function() {
