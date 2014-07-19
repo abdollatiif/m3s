@@ -13,6 +13,6 @@ app.listen(port, function() {
 });
 
 app.get('/', function(req, res) {
-  res.sendfile(__dirname + '/public/app.html');
+  res.sendfile('/public/app.html', {root: __dirname});
 });
 
