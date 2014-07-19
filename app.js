@@ -1,10 +1,12 @@
-var express = require('express');
+var express = require('express'),
+    lessMiddleware = require('less-middleware');
 
 var app = module.exports = express.createServer();
 
-app.use(require('less-middleware')(__dirname + '/public'));
+app.use(lessMiddleware(__dirname + '/public'));
 app.use(express.static(__dirname + '/public'));
-app.set('appIndex', './public/app.html')
+
+app.set('appIndex', './public/app.html');
  
 var port = process.env.PORT || 3000;
 
