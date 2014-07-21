@@ -1,8 +1,14 @@
 var    express = require('express'),
     connection = require('./lib/db').conn,
-        config = require('./config').config;
+        config = require('./config').config,
+       connect = require('connect');
 
 var app = module.exports = express.createServer();
+
+app.configure('development', function() {
+    app.use(connect.static('./public'));
+    app.set('appIndex', './public/index.html')
+});
 
 var port = process.env.PORT || 3000;
 
@@ -13,4 +19,3 @@ app.listen(port, function() {
 app.get('/', function(req, res) {
   res.sendfile('/public/index.html', {root: __dirname});
 });
-
