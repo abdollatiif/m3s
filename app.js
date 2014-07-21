@@ -7,7 +7,6 @@ var app = module.exports = express.createServer();
 
 app.configure('development', function() {
     app.use(connect.static('./public'));
-    app.set('appIndex', './public/index.html')
 });
 
 var port = process.env.PORT || 3000;
