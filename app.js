@@ -1,6 +1,6 @@
-var express = require('express'),
+var    express = require('express'),
     connection = require('./lib/db').conn,
-    config = require('./config').config;
+        config = require('./config').config;
 
 var app = module.exports = express.createServer();
 
@@ -11,6 +11,6 @@ app.listen(port, function() {
 });
 
 app.get('/', function(req, res) {
-  res.sendfile('/public/app.html', {root: __dirname});
+  res.sendfile('/public/index.html', {root: __dirname});
 });
 
