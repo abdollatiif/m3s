@@ -1,4 +1,6 @@
-var express = require('express');
+var express = require('express'),
+    connection = require('./lib/db').conn,
+    config = require('./config').config;
 
 var app = module.exports = express.createServer();
 
