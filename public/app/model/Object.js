@@ -12,7 +12,7 @@ Ext.define('m3s.model.Object', {
             'json',
             'idsc',
             'idp',
-        ],
+        ]/*,
 
         proxy: {
             type: 'jsonp',
@@ -22,6 +22,6 @@ Ext.define('m3s.model.Object', {
                 type: 'json',
                 rootProperty: 'objects'
             }
-        }
+        }*/
     }
 });
