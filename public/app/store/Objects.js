@@ -14,7 +14,9 @@ Ext.define('m3s.store.Objects', {
                 type: 'json',
                 rootProperty: 'objects'
             }
-        }
+        },
+        
+        autoLoad: true
         
         /*
         data: [
