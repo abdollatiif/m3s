@@ -24,7 +24,7 @@ Ext.define('m3s.view.Main', {
                   {
                 	  docked: 'top',
                 	  xtype: 'titlebar',
-                	  title: 'Welcome to Sencha Touch 2'
+                	  title: 'List of Objects'
                   },
                   { 
                 	  xtype: 'listObjects'
@@ -42,9 +42,7 @@ Ext.define('m3s.view.Main', {
                         title: 'Getting Started'
                     },
                     {
-                        xtype: 'video',
-                        url: 'http://www.youtube.com/watch?v=fLjU3alAhe4',
-                        posterUrl: 'http://b.vimeocdn.com/ts/261/062/261062119_640.jpg'
+                    	xtype: 'listObjects'
                     }
                 ]
             }
