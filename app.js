@@ -8,6 +8,7 @@ var app = module.exports = express.createServer();
 
 app.configure('development', function() {
     app.use(connect.static('./public'));
+    app.enable('jsonp callback');
 });
 
 var port = process.env.PORT || 3000;
