@@ -6,8 +6,6 @@ Ext.define('m3s.store.Objects', {
     	
         model: 'm3s.model.Object',
 
-        pageSize: 20,
-
         proxy: {
             type: 'jsonp',
             url: '/objects',

@@ -7,13 +7,11 @@ Ext.define('m3s.model.Object', {
 
     config: {
 
-        idProperty : "id",
-
         fields: [
             'id',
             'json',
-            'idp',
             'idsc',
+            'idp',
         ],
 
         proxy: {
