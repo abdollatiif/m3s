@@ -29,10 +29,11 @@ app.get('/objects', function(req, res, next) {
 		
 	    _.each(objects, function(object) {
 	    	data.objects.push(object);
-	    	console.log(data);
 	    }); 
 	});
-		
+	
+	console.log(data);
+	
 	res.json(data);
 	
 });
