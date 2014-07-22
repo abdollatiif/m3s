@@ -26,16 +26,13 @@ app.get('/objects', function(req, res, next) {
 	var data = { objects: []};
 	
 	connection.query('SELECT * from object', function(err, objects, fields) {	
-	
-		console.log(objects);
 		
 	    _.each(objects, function(object) {
+	    	console.log(object);
 	    	data.objects.push(object);
 	    }); 
 	});
-	
-	console.log(data);
-	
+		
 	res.json(data);
 	
 });
