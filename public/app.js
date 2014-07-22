@@ -16,9 +16,21 @@ Ext.application({
     requires: [
         'Ext.MessageBox'
     ],
+    
+    models: [
+       'Object'
+    ],
+
+    stores: [
+       'Objects'
+    ],
 
     views: [
-        'Main'
+       'Main'
+    ],
+
+    controllers: [
+       'Objects'
     ],
 
     icon: {
