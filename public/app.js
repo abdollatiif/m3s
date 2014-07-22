@@ -29,6 +29,10 @@ Ext.application({
        'Main',
        'List'
     ],
+    
+    controllers: [
+        'Objects'
+    ],
 
     icon: {
         '57': 'resources/icons/Icon.png',

@@ -7,9 +7,18 @@ Ext.define('m3s.view.List', {
 
 	config: {
 
-		store: 'Objects',
+		//store: 'Objects',
 		
-		itemTpl: '{json}',
+		//itemTpl: '{json}',
+		
+		itemTpl: '{title}',
+		
+	    data: [
+	        { title: 'Item 1' },
+	        { title: 'Item 2' },
+	        { title: 'Item 3' },
+	        { title: 'Item 4' }
+	    ]
 	},
 
 });
