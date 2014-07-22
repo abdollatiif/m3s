@@ -19,6 +19,6 @@ Ext.define('m3s.view.List', {
 	        { title: 'Item 3' },
 	        { title: 'Item 4' }
 	    ]*/
-	},
+	}
 
 });
