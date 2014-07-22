@@ -13,7 +13,7 @@ Ext.define('m3s.view.List', {
 
 		store: 'm3s.store.Objects',
 		
-		itemTpl: '{json}',
+		itemTpl: '{json}'
 		
 		//itemTpl: '{title}',
 		/*
