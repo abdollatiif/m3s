@@ -8,8 +8,6 @@ Ext.define('m3s.view.List', {
 	config: {
 
 		store: 'Objects',
-
-		itemCls: 'expandedObjects',        
 		
 		itemTpl: '{json}',
 	},

@@ -21,11 +21,11 @@ Ext.define('m3s.view.Main', {
                 scrollable: true,
 
                 items: [
-                  {
+                  /*{
                 	  docked: 'top',
                 	  xtype: 'titlebar',
                 	  title: 'List of Objects'
-                  },
+                  },*/
                   { 
                 	  xtype: 'listObjects'
                   }
