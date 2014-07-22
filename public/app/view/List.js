@@ -4,16 +4,12 @@ Ext.define('m3s.view.List', {
 	extend: 'Ext.List',
 	
 	xtype: 'listObjects',
-	
-	requires: [
-	   'm3s.store.Objects'
-	],
 
 	config: {
 
-		store: 'm3s.store.Objects',
+		store: 'Objects',
 		
-		itemTpl: '{json}'
+		itemTpl: Ext.create('Ext.XTemplate','{json}')
 		
 		//itemTpl: '{title}',
 		/*
