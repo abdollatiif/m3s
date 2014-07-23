@@ -6,7 +6,7 @@ Ext.define('m3s.controller.Objects', {
 
         refs: {
         	objectList: 'objectList',
-            toolbar: 'objectDetail toolbar',
+            toolbar: 'objectDetail toolbar'
         },
 
         control: {
@@ -17,7 +17,8 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onObjectTap: function(record) {
-        this.showObject(record);
+        //this.showObject(record);
+    	Ext.create('m3s.view.Dialog', { msg: 'Tapped Item' }).show();
     },
     
     showObject: function(record) {
