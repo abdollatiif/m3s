@@ -6,6 +6,8 @@ Ext.define('m3s.view.ListObj', {
 	xtype: 'listobj',
 
 	config: {
+		
+		layout: 'fit',
 
 		store: 'Objects',
 		
