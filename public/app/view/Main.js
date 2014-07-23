@@ -15,9 +15,11 @@ Ext.define('m3s.view.Main', {
         items: [
             {
                 title: 'Objects',
+                
                 iconCls: 'home',
 
                 styleHtmlContent: true,
+                
                 scrollable: true,
 
                 items: [
@@ -33,6 +35,7 @@ Ext.define('m3s.view.Main', {
             },
             {
                 title: 'Notes',
+                
                 iconCls: 'action',
 
                 items: [
