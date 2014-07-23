@@ -31,6 +31,7 @@ app.get('/objects', function(req, res, next) {
 	    	data.objects.push(object);
 	    }); 
 	    
+	    console.log(data);
 	    res.json(data);
 	});
 
