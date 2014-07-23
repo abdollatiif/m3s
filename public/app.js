@@ -56,7 +56,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('m3s.view.ListObj'));
+        Ext.Viewport.add(Ext.create('m3s.view.Main'));
     },
 
     onUpdated: function() {
