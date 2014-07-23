@@ -1,5 +1,5 @@
 
-Ext.define('m3s.view.List', {
+Ext.define('m3s.view.ListObj', {
 
 	extend: 'Ext.List',
 	

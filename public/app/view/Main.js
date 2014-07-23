@@ -6,7 +6,7 @@ Ext.define('m3s.view.Main', {
     
     requires: [
         'Ext.TitleBar',
-        'm3s.view.List'
+        'm3s.view.ListObj'
     ],
     
     config: {
@@ -22,11 +22,10 @@ Ext.define('m3s.view.Main', {
                 
                 scrollable: true,
 
-                items: [
-                  { 
+                items: { 
                 	  xtype: 'lsobjs'
-                  }
-                ]
+                }
+               
             },
             {
                 title: 'Notes',
@@ -45,9 +44,5 @@ Ext.define('m3s.view.Main', {
                 ]
             }
         ]
-    },
-	
-	initialize: function() {
-		this.callParent(); 
-	}
+    }
 });
