@@ -28,8 +28,7 @@ Ext.define('m3s.view.Main', {
                     	title: 'List of Objects'
                 	},
                 	{
-                        xtype: 'listobj',
-                        itemHeight: 100
+                        xtype: 'listobj'
                 	}  
                 ]
 
