@@ -9,6 +9,13 @@ Ext.define('m3s.view.Main', {
     ],
     
     config: {
+    	layout: {
+			type: 'card',
+			animation: {
+				type: 'fade'
+			}
+		},
+		
         items: [
             {
                 xtype: 'listobj'
