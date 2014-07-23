@@ -11,7 +11,7 @@ Ext.define('m3s.view.Main', {
     config: {
         items: [
             {
-                xtype: 'objectsList'
+                xtype: 'listobj'
             }
         ]
     }
