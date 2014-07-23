@@ -1,24 +1,54 @@
 Ext.define('m3s.view.Main', {
 	
-    extend: 'Ext.Container',
+    extend: 'Ext.tab.Panel',
     
     xtype: 'main',
     
     requires: [
+        'Ext.TitleBar',
         'm3s.view.ListObj'
     ],
     
     config: {
-    	layout: {
-			type: 'card',
-			animation: {
-				type: 'fade'
-			}
-		},
-		
+    	
+        tabBarPosition: 'bottom',
+
         items: [
             {
-                xtype: 'listobj'
+                title: 'Objects',
+                iconCls: 'home',
+
+                styleHtmlContent: true,
+                scrollable: true,
+
+                items: [ 
+                	{
+                    	docked: 'top',
+                    	xtype: 'titlebar',
+                    	title: 'List of Objects'
+                	},
+                	{
+                        xtype: 'listobj',
+                        layout: 'fit'
+                	}  
+                ]
+
+            },
+            {
+                title: 'Notes',
+                iconCls: 'action',
+
+                items: [
+                    {
+                        docked: 'top',
+                        xtype: 'titlebar',
+                        title: 'List of Notes'
+                    },
+                    {
+                        xtype: 'listobj',
+                        layout: 'fit'
+                    }
+                ]
             }
         ]
     }
