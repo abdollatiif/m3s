@@ -28,7 +28,7 @@ Ext.define('m3s.view.Main', {
                     	title: 'List of Objects'
                 	},
                 	{
-                        xtype: 'listobj'
+                		xtype: 'listobj'
                 	}  
                 ]
 
@@ -44,7 +44,7 @@ Ext.define('m3s.view.Main', {
                         title: 'List of Notes'
                     },
                     {
-                        xtype: 'listobj',
+                        xtype: 'listobj'
                     }
                 ]
             }
