@@ -78,6 +78,10 @@
         {
             "path": "resources/css/app.css",
             "update": "delta"
+        },
+        {
+            "path": "resources/css/m3s.css",
+            "update": "delta"
         }
     ],
 
