@@ -14,32 +14,32 @@ Ext.define('m3s.view.Main', {
 
         items: [
             {
-                title: 'Welcome',
+                title: 'Objects',
                 iconCls: 'home',
 
                 styleHtmlContent: true,
                 scrollable: true,
 
                 items: [
-                  /*{
+                  {
                 	  docked: 'top',
                 	  xtype: 'titlebar',
                 	  title: 'List of Objects'
-                  },*/
+                  },
                   { 
                 	  xtype: 'listObjects'
                   }
                 ]
             },
             {
-                title: 'Get Started',
+                title: 'Notes',
                 iconCls: 'action',
 
                 items: [
                     {
                         docked: 'top',
                         xtype: 'titlebar',
-                        title: 'Getting Started'
+                        title: 'List of Notes'
                     },
                     {
                     	xtype: 'listObjects'
