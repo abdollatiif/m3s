@@ -18,7 +18,7 @@ Ext.define('m3s.controller.Objects', {
     
     onObjectTap: function(record) {
         //this.showObject(record);
-    	console.log(record);
+    	console.log(record.get('json'));
     	Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);
     },
     
