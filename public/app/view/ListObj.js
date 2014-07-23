@@ -7,7 +7,9 @@ Ext.define('m3s.view.ListObj', {
 
 	config: {
 		
-		layout: 'fit',
+		itemCls: 'expandedObject',
+
+        itemHeight:114,
 
 		store: 'Objects',
 		
