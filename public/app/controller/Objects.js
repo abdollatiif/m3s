@@ -17,10 +17,8 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onObjectTap: function(record) {
-        //this.showObject(record);
-    	console.log(record.get('json'));
-    	console.log(this.getTitlebar());
-    	Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);
+        this.showObject(record);
+    	//Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);
     },
     
     showObject: function(record) {
@@ -31,13 +29,15 @@ Ext.define('m3s.controller.Objects', {
             this.objectDetailCmp = Ext.widget('objectDetail');
         }
 
-        this.getTitlebar().setTitle(record.get('json'));
-
+        //this.getTitlebar().setTitle(record.get('json'));
+        /*
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
-        });
+        });*/
 
         this.objectDetailCmp.setRecord(record);
+        
+        console.log(this.objectDetailCmp);
     }
 });
