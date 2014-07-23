@@ -18,7 +18,7 @@ Ext.define('m3s.controller.Objects', {
     
     onObjectTap: function(record) {
         //this.showObject(record);
-    	Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);;
+    	Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);
     },
     
     showObject: function(record) {
