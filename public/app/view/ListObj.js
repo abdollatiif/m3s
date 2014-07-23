@@ -1,9 +1,7 @@
 
 Ext.define('m3s.view.ListObj', {
 
-	extend: 'Ext.List',
-	
-	xtype: 'lsobjs',
+	extend: 'Ext.List',	
 
 	config: {
 
