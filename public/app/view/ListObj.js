@@ -3,7 +3,7 @@ Ext.define('m3s.view.ListObj', {
 
 	extend: 'Ext.List',
 	
-	layout: 'fit',
+	layout: 'card',
 	
 	xtype: 'listobj',
 
