@@ -11,14 +11,6 @@ Ext.define('m3s.view.List', {
 		
 		itemTpl: Ext.create('Ext.XTemplate','{json}')
 		
-		//itemTpl: '{title}',
-		/*
-	    data: [
-	        { title: 'Item 1' },
-	        { title: 'Item 2' },
-	        { title: 'Item 3' },
-	        { title: 'Item 4' }
-	    ]*/
 	}
 
 });
