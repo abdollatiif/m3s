@@ -18,9 +18,6 @@ Ext.define('m3s.view.Main', {
                 title: 'Objects',
                 iconCls: 'home',
 
-                styleHtmlContent: true,
-                scrollable: true,
-
                 items: [ 
                 	{
                     	docked: 'top',
