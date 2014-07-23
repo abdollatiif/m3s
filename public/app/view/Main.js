@@ -11,6 +11,13 @@ Ext.define('m3s.view.Main', {
     
     config: {
     	
+    	layout: {
+			type: 'card',
+			animation: {
+				type: 'fade'
+			}
+		},
+    	
         tabBarPosition: 'bottom',
 
         items: [
@@ -29,7 +36,6 @@ Ext.define('m3s.view.Main', {
                 	},
                 	{
                         xtype: 'listobj',
-                        layout: 'fit'
                 	}  
                 ]
 
@@ -46,7 +52,6 @@ Ext.define('m3s.view.Main', {
                     },
                     {
                         xtype: 'listobj',
-                        layout: 'fit'
                     }
                 ]
             }
