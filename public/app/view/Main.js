@@ -6,7 +6,7 @@ Ext.define('m3s.view.Main', {
     
     requires: [
         'Ext.TitleBar',
-        'm3s.view.ListObj'
+        'm3s.view.List'
     ],
     
     config: {
@@ -25,7 +25,7 @@ Ext.define('m3s.view.Main', {
                     	title: 'List of Objects'
                 	},
                 	{
-                		xtype: 'listobj'
+                		xtype: 'objectList'
                 	}  
                 ]
 
@@ -41,7 +41,7 @@ Ext.define('m3s.view.Main', {
                         title: 'List of Notes'
                     },
                     {
-                        xtype: 'listobj'
+                        xtype: 'objectList'
                     }
                 ]
             }

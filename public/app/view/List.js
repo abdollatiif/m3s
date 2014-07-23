@@ -1,9 +1,9 @@
 
-Ext.define('m3s.view.ListObj', {
+Ext.define('m3s.view.List', {
 
 	extend: 'Ext.List',
 		
-	xtype: 'listobj',
+	xtype: 'objectList',
 	
 	fullscreen: true,
 
