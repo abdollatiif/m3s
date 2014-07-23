@@ -4,10 +4,6 @@ Ext.define('m3s.controller.Objects', {
     
     config: {
 
-        routes: {
-            'objects/:id': 'onObjectUrl'
-        },
-
         refs: {
         	objectList: 'objectList',
             toolbar: 'objectDetail toolbar',
@@ -15,7 +11,7 @@ Ext.define('m3s.controller.Objects', {
 
         control: {
         	objectList: {
-                tapObject:    'onObjectTap'
+                tapObject: 'onObjectTap'
             }
         }
     },
