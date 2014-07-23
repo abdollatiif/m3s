@@ -27,7 +27,7 @@ Ext.define('m3s.view.Main', {
                 	  title: 'List of Objects'
                   },
                   { 
-                	  xtype: 'listObjects'
+                	  xtype: 'lsobjs'
                   }
                 ]
             },
