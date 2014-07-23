@@ -6,7 +6,7 @@ Ext.define('m3s.controller.Objects', {
 
         refs: {
         	objectList: 'objectList',
-            toolbar: 'objectDetail toolbar'
+        	titlebar: 'objectDetail titlebar'
         },
 
         control: {
@@ -19,7 +19,7 @@ Ext.define('m3s.controller.Objects', {
     onObjectTap: function(record) {
         //this.showObject(record);
     	console.log(record.get('json'));
-    	console.log(this.getToolbar());
+    	console.log(this.getTitlebar());
     	Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);
     },
     
@@ -31,7 +31,7 @@ Ext.define('m3s.controller.Objects', {
             this.objectDetailCmp = Ext.widget('objectDetail');
         }
 
-        this.getToolbar().setTitle(record.get('json'));
+        this.getTitlebar().setTitle(record.get('json'));
 
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
