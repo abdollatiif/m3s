@@ -3,3 +3,9 @@
 	width: 100%;
 	height: 100%;
 }
+
+.backBtn {
+	background: url(ism.ma/images_lib/left_arrow.png);
+	width: 46px;
+	height: 46px;
+}
