@@ -6,7 +6,7 @@ Ext.define('m3s.controller.Objects', {
 
         refs: {
         	objectList: 'objectList',
-        	titlebar: 'objectDetail titlebar'
+        	toolbar: 'objectDetail toolbar'
         },
 
         control: {
@@ -29,16 +29,14 @@ Ext.define('m3s.controller.Objects', {
             this.objectDetailCmp = Ext.widget('objectDetail');
         }
 
-        //this.getTitlebar().setTitle(record.get('json'));
+        this.getToolbar().setTitle(record.get('json'));
         
         
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
         });
-        
-        //Ext.getCmp('objList').add(this.objectDetailCmp);
-                        
+                                
         this.objectDetailCmp.setRecord(record);
         
     }
