@@ -6,7 +6,8 @@ Ext.define('m3s.controller.Objects', {
 
         refs: {
         	objectList: 'objectList',
-        	titlebar: 'objectDetail titlebar'
+        	titlebar: 'objectDetail titlebar',
+        	main: 'main'
         },
 
         control: {
