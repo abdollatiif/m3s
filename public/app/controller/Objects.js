@@ -39,7 +39,7 @@ Ext.define('m3s.controller.Objects', {
         
         var view = Ext.getCmp('objList');
         
-        view.push({
+        view.add({
             title: 'Second View',
             padding: 10,
 
