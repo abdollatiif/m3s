@@ -4,7 +4,7 @@
 	height: 100%;
 }
 
-.backBtn {
+.x-button.backBtn .x-button-icon {
 	background-image:url(../images/left_arrow.png);
 	background-repeat:no-repeat;
 	width: 32px !important;
