@@ -37,10 +37,8 @@ Ext.define('m3s.controller.Objects', {
             direction: 'left'
         });*/
         
-        var view = Ext.getCmp('objList');
-        
-        view.add(this.objectDetailCmp);
-                
+        Ext.getCmp('objList').add(this.objectDetailCmp);
+                        
         this.objectDetailCmp.setRecord(record);
         
     }
