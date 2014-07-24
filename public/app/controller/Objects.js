@@ -31,9 +31,25 @@ Ext.define('m3s.controller.Objects', {
 
         //this.getTitlebar().setTitle(record.get('json'));
         
+        /*
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
+        });*/
+        
+        objectList.push({
+            title: 'Second View',
+            padding: 10,
+
+            items: [
+                {
+                    xtype: 'button',
+                    text: 'Pop this view!',
+                    handler: function() {
+                    	objectList.pop();
+                    }
+                }
+            ]
         });
 
         this.objectDetailCmp.setRecord(record);
