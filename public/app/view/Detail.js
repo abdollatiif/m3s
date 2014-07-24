@@ -17,6 +17,7 @@ Ext.define('m3s.view.Detail', {
                     {
                         xtype: 'button',
                         cls: 'backBtn',
+                        iconCls: 'backBtn',
                         id: 'objectBackButton',
                         align: 'left'
                     },
