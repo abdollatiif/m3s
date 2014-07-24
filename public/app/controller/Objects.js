@@ -30,11 +30,11 @@ Ext.define('m3s.controller.Objects', {
         }
 
         //this.getTitlebar().setTitle(record.get('json'));
-        /*
+        
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
-        });*/
+        });
 
         this.objectDetailCmp.setRecord(record);
         
