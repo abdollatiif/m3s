@@ -39,23 +39,14 @@ Ext.define('m3s.controller.Objects', {
         
         var view = Ext.getCmp('objList');
         
-        view.add({
-            title: 'Second View',
-            padding: 10,
-
-            items: [
-                {
-                    xtype: 'button',
-                    text: 'Pop this view!',
-                    handler: function() {
-                    	view.pop();
-                    }
-                }
-            ]
+        view.animateActiveItem(this.objectDetailCmp, {
+            type: 'slide',
+            direction: 'left'
         });
-
+        
+        console.log(view);
+        
         this.objectDetailCmp.setRecord(record);
         
-        console.log(this.objectDetailCmp);
     }
 });
