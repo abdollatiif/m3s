@@ -12,13 +12,15 @@ Ext.define('m3s.controller.Objects', {
         control: {
         	objectList: {
                 tapObject: 'onObjectTap'
+            },
+            '#objectBackButton': {
+                tap: 'doObjectBack'
             }
         }
     },
     
     onObjectTap: function(record) {
         this.showObject(record);
-    	//Ext.Msg.alert('Congratulation!', 'Tapped Item', Ext.emptyFn);
     },
     
     showObject: function(record) {
@@ -39,5 +41,16 @@ Ext.define('m3s.controller.Objects', {
                                 
         this.objectDetailCmp.setRecord(record);
         
+    },
+    
+    doObjectBack: function() {
+        this.onObjectBack();
+    },
+
+    onObjectBack: function() {
+        Ext.Viewport.animateActiveItem(this.getMain(), {
+            type: 'slide',
+            direction: 'right'
+        });
     }
 });
