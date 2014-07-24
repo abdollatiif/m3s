@@ -36,7 +36,7 @@ Ext.define('m3s.controller.Objects', {
         
         
         //Ext.Viewport.
-        this.getObjectList().animateActiveItem(this.objectDetailCmp, {
+        this.getObjectList().add(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
         });
