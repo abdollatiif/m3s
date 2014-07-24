@@ -39,13 +39,8 @@ Ext.define('m3s.controller.Objects', {
         
         var view = Ext.getCmp('objList');
         
-        view.animateActiveItem(this.objectDetailCmp, {
-            type: 'slide',
-            direction: 'left'
-        });
-        
-        console.log(view);
-        
+        view.add(this.objectDetailCmp);
+                
         this.objectDetailCmp.setRecord(record);
         
     }
