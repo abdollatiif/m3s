@@ -5,7 +5,8 @@
 }
 
 .backBtn {
-	background: url(../images/left_arrow.png);
-	width: 46px;
-	height: 46px;
+	background-image:url(../images/left_arrow.png);
+	background-repeat:no-repeat;
+	width: 32px !important;
+	height: 32px !important;
 }
