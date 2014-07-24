@@ -110,7 +110,7 @@
      * Extra resources to be copied along when build
      */
     "resources": [
-	"cordova/config.xml",
+	    "cordova/config.xml",
         "resources/images",
         "resources/icons",
         "resources/startup"
