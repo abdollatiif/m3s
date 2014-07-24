@@ -37,7 +37,9 @@ Ext.define('m3s.controller.Objects', {
             direction: 'left'
         });*/
         
-        objectList.push({
+        var view = Ext.getCmp('objList');
+        
+        view.push({
             title: 'Second View',
             padding: 10,
 
@@ -46,7 +48,7 @@ Ext.define('m3s.controller.Objects', {
                     xtype: 'button',
                     text: 'Pop this view!',
                     handler: function() {
-                    	objectList.pop();
+                    	view.pop();
                     }
                 }
             ]

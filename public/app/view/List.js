@@ -9,6 +9,8 @@ Ext.define('m3s.view.List', {
 
 	config: {
 		
+		id: 'objList',
+		
 		listeners: {
 		
 			itemtap: function(dataview, index, target, record, evt) {
