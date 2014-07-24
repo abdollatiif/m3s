@@ -8,9 +8,7 @@ Ext.define('m3s.view.List', {
 	fullscreen: true,
 
 	config: {
-		
-		id: 'objList',
-		
+				
 		listeners: {
 		
 			itemtap: function(dataview, index, target, record, evt) {

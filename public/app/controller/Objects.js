@@ -31,13 +31,13 @@ Ext.define('m3s.controller.Objects', {
 
         //this.getTitlebar().setTitle(record.get('json'));
         
-        /*
+        
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
-        });*/
+        });
         
-        Ext.getCmp('objList').add(this.objectDetailCmp);
+        //Ext.getCmp('objList').add(this.objectDetailCmp);
                         
         this.objectDetailCmp.setRecord(record);
         

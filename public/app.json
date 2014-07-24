@@ -40,7 +40,7 @@
      */
     "js": [
 		{
-			"path": "cordova.js",
+			"path": "cordova/platforms/android/platform_www/cordova.js",
 			"remote": true
 		},
         {
