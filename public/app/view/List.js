@@ -7,6 +7,8 @@ Ext.define('m3s.view.List', {
 	
 	fullscreen: true,
 	
+	grouped: true,
+	
 	config: {
 				
 		listeners: {
@@ -16,7 +18,7 @@ Ext.define('m3s.view.List', {
 				var        el = Ext.get(evt.target),
             		fireEvent = 'tapObject';
 
-				m3s.currentObject = record;
+				//m3s.currentObject = record;
             
 				if (fireEvent) {
 					this.fireEvent(fireEvent, record, el);
