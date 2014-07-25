@@ -21,7 +21,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     init: function() {
-        console.log(objectList);
+        console.log(this.getObjectList());
     },
     
     onObjectTap: function(record) {
