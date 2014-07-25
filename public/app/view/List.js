@@ -26,7 +26,7 @@ Ext.define('m3s.view.List', {
 
 		store: 'Objects',
 		
-		itemTpl: Ext.create('Ext.XTemplate','{json}')
+		itemTpl: Ext.create('Ext.XTemplate','{title}')
 		
 	}
 

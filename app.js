@@ -25,7 +25,7 @@ app.get('/objects', function(req, res, next) {
 	
 	var data = { objects: []};
 	
-	connection.query('SELECT * from object', function(err, objects, fields) {	
+	connection.query('SELECT json from object', function(err, objects, fields) {	
 		
 	    _.each(objects, function(object) {
 	    	data.objects.push(object);
