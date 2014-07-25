@@ -40,7 +40,10 @@ Ext.define('m3s.controller.Objects', {
             direction: 'left'
         });*/
         
-        this.getObjectList().add([this.objectDetailCmp]);
+        this.getObjectList().animateActiveItem(this.objectDetailCmp, {
+            type: 'slide',
+            direction: 'left'
+        });
                                 
         this.objectDetailCmp.setRecord(record);
         
