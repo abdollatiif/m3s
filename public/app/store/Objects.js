@@ -6,8 +6,11 @@ Ext.define('m3s.store.Objects', {
     	
         model: 'm3s.model.Object',
         
+        sorters: 'idp',
+        
         grouper: {
             groupFn: function(record) {
+            	console.log(record.get('idp'));
                 return record.get('idp');
             }
         },

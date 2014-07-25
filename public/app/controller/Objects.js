@@ -26,8 +26,6 @@ Ext.define('m3s.controller.Objects', {
     
     showObject: function(record) {
     	
-        //m3s.currentObject = record;
-
         if (!this.objectDetailCmp) {
             this.objectDetailCmp = Ext.widget('objectDetail');
         }
