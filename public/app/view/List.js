@@ -4,11 +4,7 @@ Ext.define('m3s.view.List', {
 	extend: 'Ext.List',
 		
 	xtype: 'objectList',
-	
-	fullscreen: true,
-	
-	grouped: true,
-	
+			
 	config: {
 				
 		listeners: {
@@ -19,6 +15,8 @@ Ext.define('m3s.view.List', {
 		},
 
 		store: 'Objects',
+		
+		grouped: true,
 		
 		itemTpl: Ext.create('Ext.XTemplate','{title}')
 		
