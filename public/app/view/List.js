@@ -14,7 +14,7 @@ Ext.define('m3s.view.List', {
 		listeners: {
 		
 			itemtap: function(dataview, index, target, record, evt) {
-				this.fireEvent('tapObject', record, el);
+				this.fireEvent('tapObject', record, Ext.get(evt.target));
 			}
 		},
 

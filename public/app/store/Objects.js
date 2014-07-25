@@ -10,7 +10,6 @@ Ext.define('m3s.store.Objects', {
         
         grouper: {
             groupFn: function(record) {
-            	console.log(record.get('idp'));
                 return record.get('idp');
             }
         },
