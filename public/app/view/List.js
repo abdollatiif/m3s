@@ -6,6 +6,8 @@ Ext.define('m3s.view.List', {
 	xtype: 'objectList',
 	
 	fullscreen: true,
+	
+	layout: 'card',
 
 	config: {
 				
