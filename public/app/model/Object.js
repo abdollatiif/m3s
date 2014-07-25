@@ -8,6 +8,10 @@ Ext.define('m3s.model.Object', {
     config: {
 
         fields: [
+            'id',
+            'idp',
+            'idsc',
+            'json',
             'title',
             'content'
         ],
