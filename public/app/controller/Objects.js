@@ -34,13 +34,8 @@ Ext.define('m3s.controller.Objects', {
 
         this.getTitlebar().setTitle(record.get('title'));
         
-        /*
-        Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
-            type: 'slide',
-            direction: 'left'
-        });*/
         
-        this.getObjectList().animateActiveItem(this.objectDetailCmp, {
+        Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
         });
