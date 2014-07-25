@@ -3,7 +3,7 @@ Ext.define('m3s.view.List', {
 
 	extend: 'Ext.List',
 		
-	xtype: 'objectList',
+	xtype: 'objlist',
 	
 	fullscreen: true,
 
