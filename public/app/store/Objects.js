@@ -11,9 +11,7 @@ Ext.define('m3s.store.Objects', {
         grouper: {
             groupFn: function(record) {
             	var json = Ext.JSON.decode(record.get('idp'));
-            	if (json.id != '0') {
-            		return json.title;
-            	}
+            	return json.title;
             }
         },
         
