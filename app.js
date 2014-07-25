@@ -3,7 +3,8 @@ var    express = require('express'),
     connection = require('./lib/db').conn,
         config = require('./config').config,
        connect = require('connect'),
-          json = require('json-component');
+          json = require('json-component'),
+         merge = require('merge');
 
 var app = module.exports = express.createServer();
 
@@ -30,7 +31,7 @@ app.get('/objects', function(req, res, next) {
 		
 	    _.each(objects, function(object) {
 	    	var obj = json.parse(object.json);
-	    	var result = Ext.Object.merge(object,obj);
+	    	var result = merge(object,obj);
 	    	console.log(result);
 	    	//data.objects.push(result);
 	    }); 
