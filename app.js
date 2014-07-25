@@ -28,10 +28,10 @@ app.get('/objects', function(req, res, next) {
 	connection.query('SELECT json from object', function(err, objects, fields) {	
 		
 	    _.each(objects, function(object) {
+	    	console.log(object);
 	    	data.objects.push(object);
 	    }); 
 	    
-	    console.log(data);
 	    res.json(data);
 	});
 

@@ -21,7 +21,6 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onObjectTap: function(record) {
-    	record = JSON.parse(record);
         this.showObject(record);
     },
     
