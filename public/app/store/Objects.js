@@ -6,7 +6,7 @@ Ext.define('m3s.store.Objects', {
     	
         model: 'm3s.model.Object',
         
-        sorters: 'idp',
+        sorters: 'id',
         
         grouper: {
             groupFn: function(record) {
