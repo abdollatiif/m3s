@@ -3,7 +3,7 @@ var    express = require('express'),
     connection = require('./lib/db').conn,
         config = require('./config').config,
        connect = require('connect'),
-          json = require('json');
+          json = require('json-component');
 
 var app = module.exports = express.createServer();
 
