@@ -23,13 +23,21 @@ app.get('/', function(req, res) {
 
 app.get('/objects', function(req, res, next) {
 	
-	var data = { objects: []};
+	var data = { objects: []}, data2 = { objects: []};
 	
 	connection.query('SELECT json from object', function(err, objects, fields) {	
 		
 	    _.each(objects, function(object) {
 	    	data.objects.push(object.json);
 	    }); 
+	    
+	    _.each(objects, function(object) {
+	    	data2.objects.push(object);
+	    }); 
+	    
+	    console.log(data);
+	    console.log(data2);
+
 
 	    res.json(data);
 	});
