@@ -21,8 +21,6 @@ Ext.define('m3s.controller.Objects', {
     },
 
     onObjectTap: function(record) {
-    	var obj = this.getObjectList();
-        console.log(obj);
         this.showObject(record);
     },
     
@@ -36,11 +34,13 @@ Ext.define('m3s.controller.Objects', {
 
         this.getTitlebar().setTitle(record.get('title'));
         
-        
+        /*
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
-        });
+        });*/
+        
+        this.getObjectList().add([this.objectDetailCmp]);
                                 
         this.objectDetailCmp.setRecord(record);
         
