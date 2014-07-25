@@ -30,7 +30,7 @@ app.get('/objects', function(req, res, next) {
 	    _.each(objects, function(object) {
 	    	data.objects.push(object.json);
 	    }); 
-	    console.log(JSON.parse(data));
+
 	    res.json(data);
 	});
 

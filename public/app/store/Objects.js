@@ -12,7 +12,6 @@ Ext.define('m3s.store.Objects', {
 
             reader: {
                 type: 'json',
-                record: 'json',
                 rootProperty: 'objects'
             }
         },
