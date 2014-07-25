@@ -5,13 +5,13 @@ Ext.define('m3s.controller.Objects', {
     config: {
 
         refs: {
-        	objlist: 'objlist',
+        	objectList: 'objectList',
         	titlebar: 'objectDetail titlebar',
         	main: 'main'
         },
 
         control: {
-        	objlist: {
+        	objectList: {
                 tapObject: 'onObjectTap'
             },
             '#objectBackButton': {
@@ -21,7 +21,7 @@ Ext.define('m3s.controller.Objects', {
     },
 
     onObjectTap: function(record) {
-    	var obj = this.getObjlist();
+    	var obj = this.getObjectList();
         console.log(obj);
         this.showObject(record);
     },
