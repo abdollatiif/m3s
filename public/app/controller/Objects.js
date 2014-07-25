@@ -21,7 +21,8 @@ Ext.define('m3s.controller.Objects', {
     },
     
     init: function() {
-        console.log(this.getObjlist());
+    	var obj = this.getObjlist();
+        console.log(obj);
     },
     
     onObjectTap: function(record) {
@@ -31,7 +32,7 @@ Ext.define('m3s.controller.Objects', {
     
     showObject: function(record) {
     	
-        m3s.currentObject = record;
+        //m3s.currentObject = record;
 
         if (!this.objectDetailCmp) {
             this.objectDetailCmp = Ext.widget('objectDetail');
