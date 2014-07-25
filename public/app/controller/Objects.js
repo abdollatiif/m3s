@@ -21,7 +21,6 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onObjectTap: function(record) {
-    	console.log(record);
         this.showObject(record);
     },
     
@@ -33,7 +32,7 @@ Ext.define('m3s.controller.Objects', {
             this.objectDetailCmp = Ext.widget('objectDetail');
         }
 
-        this.getTitlebar().setTitle(record.get('json'));
+        this.getTitlebar().setTitle(record.get('title'));
         
         
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
