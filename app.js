@@ -2,7 +2,8 @@ var    express = require('express'),
              _ = require('underscore'),
     connection = require('./lib/db').conn,
         config = require('./config').config,
-       connect = require('connect');
+       connect = require('connect'),
+          json = require('json');
 
 var app = module.exports = express.createServer();
 
@@ -28,7 +29,7 @@ app.get('/objects', function(req, res, next) {
 	connection.query('SELECT json from object', function(err, objects, fields) {	
 		
 	    _.each(objects, function(object) {
-	    	data.objects.push(object.json);
+	    	data.objects.push(json.parse(object.json));
 	    }); 
 	    
 	    _.each(objects, function(object) {
