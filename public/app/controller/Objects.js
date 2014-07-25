@@ -35,8 +35,7 @@ Ext.define('m3s.controller.Objects', {
         this.getTitlebar().setTitle(record.get('json'));
         
         
-        //Ext.Viewport.
-        this.getObjectList().push(this.objectDetailCmp, {
+        Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
         });
