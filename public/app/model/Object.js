@@ -13,7 +13,8 @@ Ext.define('m3s.model.Object', {
             'idsc',
             'json',
             'title',
-            'content'
+            'content',
+            'sorter'
         ],
 
         proxy: {
