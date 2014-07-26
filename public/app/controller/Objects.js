@@ -40,14 +40,16 @@ Ext.define('m3s.controller.Objects', {
     },
 
     onFacebookLogin: function() {
+    	
     	Ext.getBody().removeCls('splashBg');
+    	
+    	this.initContainer();
     	
     	if (!this.firstLoad) {
             this.onFirstLoad(FB.getUserID());
             this.firstLoad = true;
         }
     	
-        this.initContainer();
     },
     
     onFirstLoad: function(profileId) {
