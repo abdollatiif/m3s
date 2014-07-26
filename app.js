@@ -43,7 +43,7 @@ app.get('/', function(req, res) {
   res.sendfile('/public/index.html', {root: __dirname});
 });
 
-app.get('/objects', fb.checkSession, fb.getFriendIds, fb.getUserDetails, function(req, res, next) {
+app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 	
 	var data = { objects: []};
 	
