@@ -6,7 +6,9 @@ Ext.define('m3s.view.Main', {
     
     requires: [
         'Ext.TitleBar',
-        'm3s.view.List'
+        'm3s.view.List',
+        'm3s.view.Settings',
+        'm3s.view.Notes'
     ],
     
     config: {
@@ -41,7 +43,22 @@ Ext.define('m3s.view.Main', {
                         title: 'List of Notes'
                     },
                     {
-                        xtype: 'objectList'
+                        xtype: 'notes'
+                    }
+                ]
+            },
+            {
+                title: 'Settings',
+                iconCls: 'settings',
+
+                items: [
+                    {
+                        docked: 'top',
+                        xtype: 'titlebar',
+                        title: 'Settings'
+                    },
+                    {
+                        xtype: 'settings'
                     }
                 ]
             }
