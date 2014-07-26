@@ -26,11 +26,14 @@ Ext.application({
     ],
 
     views: [
+       'LoggedOut',
        'Main',
-       'Detail'
+       'Detail',
+       'Dialog'
     ],
     
     controllers: [
+        'Facebook',
         'Objects'
     ],
 
@@ -51,13 +54,24 @@ Ext.application({
         '1536x2008': 'resources/startup/1536x2008.png',
         '1496x2048': 'resources/startup/1496x2048.png'
     },
+    
+    viewport: {
+        autoMaximize: true
+    },
 
     launch: function() {
-        // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
+    	m3s.Facebook.initialize('601716809944150');
+    },
+    
+    initialize: function() {
+        this.callParent();
 
-        // Initialize the main view
-        Ext.Viewport.add(Ext.create('m3s.view.Main'));
+        var profilePic = Ext.getCmp('fbProfilePic');
+        if (profilePic) {
+            profilePic.element.on('tap', function(e) {
+                profilePic.fireEvent('tap', profilePic, e);
+            });
+        }
     },
 
     onUpdated: function() {

@@ -24,7 +24,15 @@ Ext.define('m3s.view.Main', {
                 	{
                     	docked: 'top',
                     	xtype: 'titlebar',
-                    	title: 'List of Objects'
+                    	title: 'List of Objects',
+                    	items: [
+                    	    {
+                    	    	xtype: 'component',
+            		            cls: 'fbProfilePic',
+            		            id: 'fbProfilePic',
+            		            tpl: '<img src="https://graph.facebook.com/{profileId}/picture?type=square" />'
+            		        }
+                    	]
                 	},
                 	{
                 		xtype: 'objectList'

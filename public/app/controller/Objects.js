@@ -7,7 +7,8 @@ Ext.define('m3s.controller.Objects', {
         refs: {
         	objectList: 'objectList',
         	titlebar: 'objectDetail titlebar',
-        	main: 'main'
+        	main: 'main',
+        	loggedOut: 'loggedOut'
         },
 
         control: {
@@ -16,7 +17,48 @@ Ext.define('m3s.controller.Objects', {
             },
             '#objectBackButton': {
                 tap: 'doObjectBack'
+            },
+            '#fbProfilePic': {
+                tap: 'onProfileTap'
+            },
+            '#logoutButton': {
+                tap: 'logout'
             }
+        }
+    },
+    
+    init: function() {
+
+        this.callParent();
+
+        m3s.Facebook.on({
+            connected: this.onFacebookLogin,
+            logout: this.onFacebookLogout,
+            unauthorized: this.onFacebookUnauthorized,
+            scope: this
+        });
+    },
+
+    onFacebookLogin: function() {
+    	Ext.getBody().removeCls('splashBg');
+    	
+    	if (!this.firstLoad) {
+            this.onFirstLoad(FB.getUserID());
+            this.firstLoad = true;
+        }
+    	
+        this.initContainer();
+    },
+    
+    onFirstLoad: function(profileId) {
+        Ext.getCmp('fbProfilePic').setData({
+            profileId: profileId
+        });
+    },
+
+    initContainer: function() {
+        if (!this.mainContainer) {
+            this.mainContainer = Ext.Viewport.add(Ext.create('m3s.view.Main'));
         }
     },
 
@@ -51,5 +93,68 @@ Ext.define('m3s.controller.Objects', {
             type: 'slide',
             direction: 'right'
         });
+    },
+    
+    onProfileTap: function(cmp) {
+
+        if (!this.logoutCmp) {
+
+            this.logoutCmp = Ext.create('Ext.Panel', {
+                width: 120,
+                height: 45,
+                top: 0,
+                left: 0,
+                modal: true,
+                cls:'float-panel', 
+                hideOnMaskTap: true,
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'logoutButton',
+                        text: 'Logout',
+                        ui: 'decline'
+                    }
+                ]
+            });
+        }
+
+        this.logoutCmp.showBy(cmp);
+    },
+
+    logout: function() {
+        this.logoutCmp.hide();
+        FB.logout();
+    },
+
+    onFacebookLogout: function() {
+
+        Ext.getBody().addCls('splashBg');
+        Ext.Viewport.setActiveItem({ xtype: 'loggedOut' });
+
+        if (this.objectDetailCmp) {
+            this.objectDetailCmp.destroy();
+        }
+
+        this.getMain().destroy();
+    },
+    
+    onFacebookUnauthorized: function() {
+        if (this.mainContainer) {
+            Ext.create('m3s.view.Dialog', {
+                msg: "Oops! Your Facebook session has expired.",
+                buttons: [
+                    {
+                        ui: 'green',
+                        text: 'Login to Facebook',
+                        handler: function() {
+                            window.location = m3s.Facebook.redirectUrl();
+                        }
+                    }
+                ]
+            }).show();
+        } 
+        else {
+            Ext.Viewport.add({ xtype: 'loggedOut' });
+        }
     }
 });

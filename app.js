@@ -4,7 +4,10 @@ var    express = require('express'),
         config = require('./config').config,
        connect = require('connect'),
           json = require('json-component'),
-         merge = require('merge');
+         merge = require('merge'),
+            fb = require('./lib/facebook'),
+         graph = require('fbgraph'),
+   handleError = require('./lib/error').handleError;
 
 var app = module.exports = express.createServer();
 
@@ -23,7 +26,7 @@ app.get('/', function(req, res) {
   res.sendfile('/public/index.html', {root: __dirname});
 });
 
-app.get('/objects', function(req, res, next) {
+app.get('/objects', fb.checkSession, fb.getFriendIds, fb.getUserDetails, function(req, res, next) {
 	
 	var data = { objects: []};
 	

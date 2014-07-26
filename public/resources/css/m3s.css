@@ -10,3 +10,122 @@
 	width: 32px !important;
 	height: 32px !important;
 }
+
+.x-button.shareBtn .x-button-icon {
+	background-image:url(../images/refresh.png);
+	background-repeat:no-repeat;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+.x-msgbox, .dialog {
+  min-width: 15em;
+  max-width: 20em;
+  padding: 1.2em 1.8em;
+  font-size: 80%;
+  line-height: 1.1em;
+  border: 5px solid #c2c2c2;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+.x-msgbox .msg, .dialog .msg {
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+
+.x-msgbox .msg p, .dialog .msg p {
+  margin-bottom: 0.6em;
+}
+
+.x-msgbox .x-button-red,
+.x-msgbox .x-button-green, .dialog .x-button-red, .dialog .x-button-green {
+  margin-top: 0.3em;
+  line-height: 30px;
+  border-radius: 5px;
+  padding: 0 20px;
+  border: 0;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.x-msgbox .x-button-green, .dialog .x-button-green {
+  background: url("../images/bg-sprites.png") repeat-x;
+  background-size: 1px 558px;
+  background-position-x: 0;
+  background-position-y: -495px;
+}
+
+.x-msgbox .x-button-red, .dialog .x-button-red {
+  background: url("../images/bg-sprites.png") repeat-x;
+  background-size: 1px 558px;
+  background-position-x: 0;
+  background-position-y: -526px;
+}
+
+.x-msgbox .x-button-close, .dialog .x-button-close {
+  position: absolute;
+  width: 25px;
+  height: 26px;
+  background: url("../images/icon-sprites.png") no-repeat;
+  background-size: 219px 76px;
+  background-position-x: -193px;
+  background-position-y: 0;
+  top: -17px;
+  right: -15px;
+}
+
+.x-msgbox .x-component-outer, .dialog .x-component-outer {
+  width: 100%;
+}
+
+.x-msgbox .wallMessage, .dialog .wallMessage {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.x-msgbox input, .dialog input {
+  width: 100%;
+}
+
+.loggedOut {
+  background: transparent;
+}
+
+.loginScreen {
+  top: 70% !important;
+  background: transparent;
+}
+
+.fbLogin {
+  background: url("../images/bg-sprites.png") repeat-x;
+  background-size: 1px 558px;
+  background-position-x: 0;
+  background-position-y: -147px;
+  margin-bottom: 15px;
+  width: 230px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.fbLogin.x-button-pressing, .fbLogin.x-button-pressed {
+  background-position-y: -183px;
+}
+
+body.splashBg {
+  background-image: -webkit-linear-gradient(#610100, #2f0000);
+  background-image: -moz-linear-gradient(#610100, #2f0000);
+  background-image: -o-linear-gradient(#610100, #2f0000);
+  background-image: linear-gradient(#610100, #2f0000);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.float-panel {
+  position: absolute;
+}
+
