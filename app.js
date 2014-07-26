@@ -14,6 +14,23 @@ var app = module.exports = express.createServer();
 app.configure('development', function() {
     app.use(connect.static('./public'));
     app.enable('jsonp callback');
+    
+    app.use(function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+        next();
+    });
+    
+    app.use(connect.cookieParser());
+
+    app.use(express.session({
+        secret: config.sessionSecret
+    }));
+
+    app.use(connect.bodyParser());
+    app.use(express.logger());
+    app.use(express.errorHandler({ dumpExceptions: true }));
 });
 
 var port = process.env.PORT || 3000;
