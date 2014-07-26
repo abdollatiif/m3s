@@ -51,9 +51,19 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onFirstLoad: function(profileId) {
-        Ext.getCmp('fbProfilePic').setData({
-            profileId: profileId
-        });
+        
+        var profilePic = Ext.getCmp('fbProfilePic');
+        
+        if (profilePic) {
+        	
+        	profilePic.setData({
+                profileId: profileId
+            });
+        	
+            profilePic.element.on('tap', function(e) {
+                profilePic.fireEvent('tap', profilePic, e);
+            });
+        }
     },
 
     initContainer: function() {
