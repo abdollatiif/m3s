@@ -29,8 +29,6 @@ Ext.define('m3s.controller.Objects', {
     
     init: function() {
 
-        this.callParent();
-
         m3s.Facebook.on({
             connected: this.onFacebookLogin,
             logout: this.onFacebookLogout,
