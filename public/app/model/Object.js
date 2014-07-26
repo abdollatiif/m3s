@@ -19,6 +19,7 @@ Ext.define('m3s.model.Object', {
 
         proxy: {
             type: 'jsonp',
+            
             url: '/object',
 
             reader: {
