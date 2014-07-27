@@ -35,10 +35,6 @@ Ext.define('m3s.view.Detail', {
             {
             	 xtype: 'toolbar',
                  docked: 'bottom',
-                 scrollable: {
-                     direction: 'horizontal',
-                     directionLock: true
-                 },
                  items: [
 
 					{
