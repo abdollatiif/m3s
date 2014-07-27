@@ -38,26 +38,31 @@ Ext.define('m3s.view.Detail', {
                      directionLock: true
                  },
                  items: [
-					{
-					    xtype: 'textareafield',
-					    name: 'comment',
-					    label: 'Comment',
-					    maxRows: 2
-					},
-					{
-					    text: 'Submit',
-					    ui: 'confirm',
-					    align: 'right',
-					    scope: this,
-					    handler: function() {
-					        var form = this.form;
-					
-					        form.submit({
-					            url: 'user.json',
-					            waitMsg: 'Saving User...'
-					        });
-					    }
-					 }
+                         {
+                        	 xtype: 'formpanel',
+                             items: [
+								{
+								    xtype: 'textareafield',
+								    name: 'comment',
+								    label: 'Comment',
+								    maxRows: 2
+								},
+								{
+								    text: 'Submit',
+								    ui: 'confirm',
+								    align: 'right',
+								    scope: this,
+								    handler: function() {
+								        var form = this.form;
+								
+								        form.submit({
+								            url: 'user.json',
+								            waitMsg: 'Saving User...'
+								        });
+								    }
+								 }
+                             ]
+                         }
                  ]
             }
         ],
