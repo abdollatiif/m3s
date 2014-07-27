@@ -38,7 +38,20 @@ Ext.define('m3s.view.Detail', {
                      directionLock: true
                  },
                  items: [
-                 
+					{
+					    text: 'Submit',
+					    ui: 'confirm',
+					    align: 'right',
+					    scope: this,
+					    handler: function() {
+					        var form = this.form;
+					
+					        form.submit({
+					            url: 'user.json',
+					            waitMsg: 'Saving User...'
+					        });
+					    }
+					 }
                  ]
             }
         ],
