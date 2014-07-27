@@ -39,6 +39,12 @@ Ext.define('m3s.view.Detail', {
                  },
                  items: [
 					{
+					    xtype: 'textareafield',
+					    name: 'comment',
+					    label: 'Comment',
+					    maxRows: 2
+					},
+					{
 					    text: 'Submit',
 					    ui: 'confirm',
 					    align: 'right',
