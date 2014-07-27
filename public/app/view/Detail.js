@@ -51,7 +51,6 @@ Ext.define('m3s.view.Detail', {
 						text: 'Submit',
 						ui: 'confirm',
 						align: 'right',
-						width: '20%',
 						scope: this,
 						handler: function() {
 							var form = this.form;
