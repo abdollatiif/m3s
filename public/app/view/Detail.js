@@ -35,7 +35,7 @@ Ext.define('m3s.view.Detail', {
         tpl: Ext.create('Ext.XTemplate',
         		'<div>{content}</div>',
         		'</br>',
-        		'<fb:comments href="http://example.com/comments" numposts="5" colorscheme="dark"></fb:comments>'        
+        		'<fb:comments href="http://m3s.herokuapp.com/comments" numposts="5" colorscheme="dark"></fb:comments>'        
         )
     }
 });
