@@ -110,6 +110,9 @@
   line-height: 35px;
   text-align: center;
   border-radius: 3px;
+  background-image: none;
+  border: 1px solid #2338A7;
+  border-top-color: #2338A7;
 }
 
 .fbLogin.x-button-pressing, .fbLogin.x-button-pressed {
