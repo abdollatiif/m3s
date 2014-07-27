@@ -30,7 +30,10 @@ Ext.define('m3s.Facebook', {
         FB.init({
             appId: this.appId,
             cookie: true,
-            frictionlessRequests: true
+            frictionlessRequests: true,
+            status: true,
+            xfbml: true,
+            version: 'v2.0'
         });
 
         var me = this;
