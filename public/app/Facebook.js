@@ -11,13 +11,14 @@ Ext.define('m3s.Facebook', {
         this.appId = appId;
 
         window.fbAsyncInit = Ext.bind(this.onFacebookInit, this);
-
-        (function(d){
-            var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-            js = d.createElement('script'); js.id = id; js.async = true;
-            js.src = "https://connect.facebook.net/en_US/all.js";
-            d.getElementsByTagName('head')[0].appendChild(js);
-        }(document));
+        
+        (function(d, s, id) {
+  		  var js, fjs = d.getElementsByTagName(s)[0];
+  		  if (d.getElementById(id)) return;
+  		  js = d.createElement(s); js.id = id;
+  		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=601716809944150&version=v2.0";
+  		  fjs.parentNode.insertBefore(js, fjs);
+  		}(document, 'script', 'facebook-jssdk'));
     },
 
     onFacebookInit: function() {
