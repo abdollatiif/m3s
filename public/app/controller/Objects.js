@@ -107,8 +107,6 @@ Ext.define('m3s.controller.Objects', {
     
     onProfileTap: function(cmp) {
     	
-    	console.log(cmp);
-
         if (!this.logoutCmp) {
 
             this.logoutCmp = Ext.create('Ext.Panel', {

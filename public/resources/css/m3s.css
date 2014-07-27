@@ -101,7 +101,7 @@
 }
 
 .fbLogin {
-  background: url("../images/bg-sprites.png") repeat-x;
+  background-color: rgb(82, 127, 194);
   background-size: 1px 558px;
   background-position-x: 0;
   background-position-y: -147px;
@@ -117,10 +117,10 @@
 }
 
 body.splashBg {
-  background-image: -webkit-linear-gradient(#610100, #2f0000);
-  background-image: -moz-linear-gradient(#610100, #2f0000);
-  background-image: -o-linear-gradient(#610100, #2f0000);
-  background-image: linear-gradient(#610100, #2f0000);
+  background-image: -webkit-linear-gradient(#1553C2, #094561);
+  background-image: -moz-linear-gradient(#1553C2, #094561);
+  background-image: -o-linear-gradient(#1553C2, #094561);
+  background-image: linear-gradient(#1553C2, #094561);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
