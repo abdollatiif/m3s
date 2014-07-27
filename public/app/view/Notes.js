@@ -8,6 +8,6 @@ Ext.define('m3s.view.Notes', {
 
         scrollable: 'vertical',
         
-        tpl: Ext.create('Ext.XTemplate','some texte in template notes')
+        tpl: Ext.create('Ext.XTemplate','<fb:comments href="http://m3s.herokuapp.com//comments" numposts="5" colorscheme="dark"></fb:comments>')
     }
 });
