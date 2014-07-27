@@ -45,7 +45,7 @@ Ext.define('m3s.view.Detail', {
 						xtype: 'textfield',
 						name: 'comment',
 						label: 'Comment',
-						width: '80%'
+						width: '60%'
 					},
 					{
 						text: 'Submit',
