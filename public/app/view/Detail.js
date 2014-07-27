@@ -29,13 +29,22 @@ Ext.define('m3s.view.Detail', {
                         align: 'right'
                     }
                 ]
+            },
+            {
+            	 xtype: 'toolbar',
+                 docked: 'bottom',
+                 scrollable: {
+                     direction: 'horizontal',
+                     directionLock: true
+                 },
+                 items: [
+                 
+                 ]
             }
         ],
         
         tpl: Ext.create('Ext.XTemplate',
-        		'<div>{content}</div>',
-        		'</br>',
-        		'<fb:comments href="http://m3s.herokuapp.com/comments" numposts="5" colorscheme="dark"></fb:comments>'        
+        		'<div>{content}</div>'       
         )
     }
 });
