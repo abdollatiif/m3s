@@ -18,11 +18,13 @@ Ext.application({
     ],
     
     models: [
-       'Object'
+       'Object',
+       'Grocery'
     ],
 
     stores: [
-       'Objects'
+       'Objects',
+       'Groceries'
     ],
 
     views: [

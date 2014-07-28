@@ -1,13 +1,13 @@
 Ext.define('m3s.view.Notes', {
-
-    extend: 'Ext.Container',
+	
+    extend: 'Ext.NestedList',
     
     xtype: 'notes',
     
-	config: {
-
-        scrollable: 'vertical',
-        
-        tpl: Ext.create('Ext.XTemplate','Notes')
+    config: {
+        fullscreen: true,
+        title: 'Articles',
+        displayField: 'text',
+        store: 'Groceries'
     }
 });
