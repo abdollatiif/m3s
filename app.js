@@ -63,7 +63,7 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 
 app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 	console.log('______________  Start ____________________');
-	console.log(new ObjectDump(req).toString());
+	console.log(JSON.stringify(req));
 	console.log('______________  End ______________________');
 });
 
