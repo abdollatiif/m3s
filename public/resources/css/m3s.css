@@ -29,14 +29,14 @@
 }
 
 .x-button.backBtn .x-button-icon {
-	background-image:url(../images/left_arrow.png);
+	background-image:url(../images/glyphicons/png/glyphicons_380_message_forward.png);
 	background-repeat:no-repeat;
 	width: 32px !important;
 	height: 32px !important;
 }
 
 .x-button.commentBtn .x-button-icon {
-	background-image:url(../images/approve_comment.png);
+	background-image:url(../images/simplistica/approve_comment.png);
 	background-repeat:no-repeat;
 	width: 32px !important;
 	height: 32px !important;
