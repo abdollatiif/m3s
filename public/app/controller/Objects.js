@@ -77,6 +77,7 @@ Ext.define('m3s.controller.Objects', {
     },
 
     onObjectTap: function(record) {
+    	m3s.currentObject = record;
         this.showObject(record);
     },
     
@@ -173,7 +174,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onSubmitTap: function() {
-    	console.log(this);
+    	console.log(m3s.currentObject);
     	var txt = Ext.getCmp('txtComment');
     	console.log(txt.getValue());
     }
