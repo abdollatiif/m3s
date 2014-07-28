@@ -182,7 +182,7 @@ Ext.define('m3s.controller.Objects', {
             method: 'POST',
             params: {
                 objectId: m3s.currentObject.data.id,
-                title:   m3s.currentObject.data.json,
+                json:   m3s.currentObject.data.json,
                 comment: txtfield.getValue(),
             },
             success: function(response) {

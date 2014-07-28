@@ -63,18 +63,19 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 
 app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 		
-	var body = stringifyObject(req.body, {
+	var data = req.body;
+	
+	data = Ext.apply({
+        profile: req.session.fb.user_id
+    }, data);
+	
+	
+	var da = stringifyObject(data, {
 	    indent: '  ',
 	    singleQuotes: false
 	});
 	
-	var session = stringifyObject(req.session, {
-	    indent: '  ',
-	    singleQuotes: false
-	});
-
-	console.log(body);
-	console.log(session);
+	console.log(data);
 	
 });
 
