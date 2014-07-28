@@ -4,10 +4,6 @@ Ext.define('m3s.view.Notes', {
     
     xtype: 'notes',
     
-    layout: {
-        type: 'vbox'
-    },
-    
     id: 'notes',
     
     config: {
@@ -15,6 +11,9 @@ Ext.define('m3s.view.Notes', {
         title: 'Articles',
         displayField: 'text',
         store: 'Groceries',
-        cls: 'nestedArticles'
+        cls: 'nestedArticles',
+        detailCard: {
+            html: 'You can see detail information here!'
+        }
     }
 });
