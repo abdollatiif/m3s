@@ -65,7 +65,7 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 		
 	var data = req.body;
 	
-	data = Ext.apply({
+	data = merge({
         profile: req.session.fb.user_id
     }, data);
 	
