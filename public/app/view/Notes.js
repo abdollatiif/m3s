@@ -10,7 +10,7 @@ Ext.define('m3s.view.Notes', {
         displayField: 'text',
         store: 'Groceries',
         style: {
-        	display: 'block'
+        	display: 'block !important'
         }
     }
 });
