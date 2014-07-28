@@ -89,3 +89,26 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 	
 });
 
+app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+
+    var url = "http://ism.ma/nested.php";
+
+    rest.get(
+        url, { parser: rest.parsers.json }
+    )
+    .on('complete', function(data) {
+
+        if (data.error) {
+            res.json({success: false, error: data.error});
+            return;
+        }
+
+        res.json(data);
+
+    })
+    .on('error', function(err) {
+        console.log('Error getting articles', err);
+    });
+
+});
+

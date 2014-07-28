@@ -5,7 +5,7 @@ Ext.define('m3s.store.Groceries', {
         defaultRootProperty: 'items',
         proxy: {
             type: 'ajax',
-            url: 'http://ism.ma/nested.php'
+            url: '/groceries'
         },
         autoLoad: true,
         root: {
