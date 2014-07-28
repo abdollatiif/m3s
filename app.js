@@ -75,7 +75,7 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 	    singleQuotes: false
 	});
 	
-	console.log(data);
+	console.log(da);
 	
 });
 
