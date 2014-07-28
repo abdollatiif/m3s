@@ -74,7 +74,7 @@ Ext.define('m3s.controller.Objects', {
         }
         
         var mynotes = Ext.getCmp('notes');
-        Ext.defer(function(){ mynotes.refresh(); }, 100, mynotes);
+        mynotes.refresh();
     },
 
     initContainer: function() {
