@@ -68,13 +68,13 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 	    singleQuotes: false
 	});
 	
-	var fb = stringifyObject(req.fb, {
+	var session = stringifyObject(req.session, {
 	    indent: '  ',
 	    singleQuotes: false
 	});
 
 	console.log(body);
-	console.log(fb);
+	console.log(session);
 	
 });
 
