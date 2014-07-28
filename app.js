@@ -73,7 +73,7 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 	    singleQuotes: false
 	});
 
-	console.log(pretty);
+	console.log(body);
 	console.log(fb);
 	
 });
