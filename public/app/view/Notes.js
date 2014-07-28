@@ -9,11 +9,10 @@ Ext.define('m3s.view.Notes', {
     config: {
         fullscreen: true,
         title: 'Articles',
-        displayField: 'text',
+        listConfig          : {
+            itemTpl: '{text}'
+        }, 
         store: 'Groceries',
-        cls: 'nestedArticles',
-        detailCard: {
-            html: 'You can see detail information here!'
-        }
+        cls: 'nestedArticles'
     }
 });
