@@ -8,7 +8,8 @@ Ext.define('m3s.controller.Objects', {
         	objectList: 'objectList',
         	titlebar: 'objectDetail titlebar',
         	main: 'main',
-        	loggedOut: 'loggedOut'
+        	loggedOut: 'loggedOut',
+        	notes: 'notes'
         },
 
         control: {
@@ -71,6 +72,9 @@ Ext.define('m3s.controller.Objects', {
                 profilePic.fireEvent('tap', profilePic, e);
             });
         }
+        
+        var mynotes = this.getNotes();
+        Ext.defer(function(){ mynotes.refresh(); }, 100, mynotes);
     },
 
     initContainer: function() {

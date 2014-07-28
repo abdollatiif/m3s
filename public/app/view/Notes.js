@@ -4,6 +4,8 @@ Ext.define('m3s.view.Notes', {
     
     xtype: 'notes',
     
+    id: 'notes',
+    
     config: {
         fullscreen: true,
         title: 'Articles',
