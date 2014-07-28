@@ -59,3 +59,12 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 	});
 
 });
+
+app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+	console.log('______________  APPEL ____________________');
+	console.log('req.body: '+req.body);
+	console.log('req.session: '+req.session);
+	console.log('req.viewing: '+req.viewing);
+	console.log('____________  FIN APPEL __________________');
+});
+

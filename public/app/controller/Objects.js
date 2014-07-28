@@ -174,9 +174,27 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onSubmitTap: function() {
-    	console.log(m3s.currentObject.data);
-    	var txt = Ext.getCmp('txtComment');
-    	console.log(txt.getValue());
+    	
+    	var txtfield = Ext.getCmp('txtComment');
+    	
+    	Ext.Ajax.request({
+            url: '/viewing',
+            method: 'POST',
+            params: {
+                objectId: m3s.currentObject.data.id,
+                title:   m3s.currentObject.data.json,
+                comment: txtfield.getValue(),
+            },
+            success: function(response) {
+
+                var data = JSON.parse(response.responseText);
+
+                if (data.fbError) {
+                    m3s.Facebook.error(data.fbError)
+                }
+            },
+            scope: this
+        });
     }
     
 });
