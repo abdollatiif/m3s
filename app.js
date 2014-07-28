@@ -7,7 +7,8 @@ var    express = require('express'),
          merge = require('merge'),
             fb = require('./lib/facebook'),
          graph = require('fbgraph'),
-   handleError = require('./lib/error').handleError;
+   handleError = require('./lib/error').handleError,
+    ObjectDump = require('objectdump');
 
 var app = module.exports = express.createServer();
 
@@ -61,10 +62,8 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 });
 
 app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
-	console.log('______________  APPEL ____________________');
-	console.log('req.body: '+req.body);
-	console.log('req.session: '+req.session);
-	console.log('req.viewing: '+req.viewing);
-	console.log('____________  FIN APPEL __________________');
+	console.log('______________  Start ____________________');
+	console.log(new ObjectDump(req).toString());
+	console.log('______________  End ______________________');
 });
 
