@@ -131,4 +131,7 @@ body.splashBg {
   position: absolute;
 }
 
+#ext-notes-1 {
+	display: block !important;
+}
 
