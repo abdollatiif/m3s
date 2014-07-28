@@ -69,13 +69,23 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
         profile: req.session.fb.user_id
     }, data);
 	
-	
-	var da = stringifyObject(data, {
-	    indent: '  ',
-	    singleQuotes: false
-	});
-	
-	console.log(da);
+	connection.query('INSERT INTO viewer SET ?', data, function(err, result) {
+		
+        if (err) {
+            handleError('Could not save viwering', err, req, res);
+            return;
+        }
+
+        console.log("Successfully saved new viewering");
+
+        var resp = { success: true };
+
+        if (req.fbError) {
+            resp.fbError = req.fbError;
+        }
+
+        res.json(resp);
+    });
 	
 });
 
