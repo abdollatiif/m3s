@@ -62,16 +62,19 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 });
 
 app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+		
+	var body = stringifyObject(req.body, {
+	    indent: '  ',
+	    singleQuotes: false
+	});
 	
-	console.log('______________  Start ____________________');
-	
-	var pretty = stringifyObject(req, {
+	var fb = stringifyObject(req.fb, {
 	    indent: '  ',
 	    singleQuotes: false
 	});
 
 	console.log(pretty);
+	console.log(fb);
 	
-	console.log('______________  End ______________________');
 });
 
