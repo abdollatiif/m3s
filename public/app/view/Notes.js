@@ -8,6 +8,9 @@ Ext.define('m3s.view.Notes', {
         fullscreen: true,
         title: 'Articles',
         displayField: 'text',
-        store: 'Groceries'
+        store: 'Groceries',
+        style: {
+        	display: 'block'
+        }
     }
 });
