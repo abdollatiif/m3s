@@ -8,8 +8,7 @@ Ext.define('m3s.controller.Objects', {
         	objectList: 'objectList',
         	titlebar: 'objectDetail titlebar',
         	main: 'main',
-        	loggedOut: 'loggedOut',
-        	objectDetail: 'objectDetail'
+        	loggedOut: 'loggedOut'
         },
 
         control: {
@@ -174,7 +173,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onSubmitTap: function() {
-    	console.log(getObjectDetail());
+    	console.log(this);
     	var txt = Ext.getCmp('txtComment');
     	console.log(txt.getValue());
     }
