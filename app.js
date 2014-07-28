@@ -3,6 +3,7 @@ var     express = require('express'),
      connection = require('./lib/db').conn,
          config = require('./config').config,
         connect = require('connect'),
+           rest = require('restler'),
            json = require('json-component'),
           merge = require('merge'),
              fb = require('./lib/facebook'),
@@ -107,7 +108,7 @@ app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, nex
 
     })
     .on('error', function(err) {
-        console.log('Error getting articles', err);
+        console.log('Error getting Articles', err);
     });
 
 });
