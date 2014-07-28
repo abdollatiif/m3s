@@ -12,6 +12,9 @@ Ext.define('m3s.view.Notes', {
         listConfig          : {
             itemTpl: '{text}'
         }, 
+        detailCard: {
+            html: 'You can see detail information here! <i>{text}</i>'
+        },
         store: 'Groceries',
         cls: 'nestedArticles'
     }
