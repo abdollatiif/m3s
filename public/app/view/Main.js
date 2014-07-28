@@ -51,7 +51,8 @@ Ext.define('m3s.view.Main', {
                         title: 'List of Notes'
                     },
                     {
-                        xtype: 'notes'
+                        xtype: 'notes',
+                        hidden: false
                     }
                 ]
             },
