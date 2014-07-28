@@ -9,8 +9,6 @@ Ext.define('m3s.view.Notes', {
         title: 'Articles',
         displayField: 'text',
         store: 'Groceries',
-        style: {
-        	display: 'block !important'
-        }
+        cls: 'nestedArticles'
     }
 });
