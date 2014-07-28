@@ -23,7 +23,11 @@ Ext.define('m3s.controller.Objects', {
             },
             '#logoutButton': {
                 tap: 'logout'
+            },
+            '#submitBtn': {
+            	tap: 'onSubmitTap'
             }
+
         }
     },
     
@@ -166,5 +170,12 @@ Ext.define('m3s.controller.Objects', {
         else {
             Ext.Viewport.add({ xtype: 'loggedOut' });
         }
+    },
+    
+    onSubmitTap: function(record) {
+    	console.log(record);
+    	var txt = Ext.getCmp('txtComment');
+    	console.log(txt);
     }
+    
 });
