@@ -174,7 +174,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onSubmitTap: function() {
-    	console.log(m3s.currentObject);
+    	console.log(m3s.currentObject.json);
     	var txt = Ext.getCmp('txtComment');
     	console.log(txt.getValue());
     }
