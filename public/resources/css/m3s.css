@@ -35,8 +35,8 @@
 	height: 32px !important;
 }
 
-.x-button.shareBtn .x-button-icon {
-	background-image:url(../images/refresh.png);
+.x-button.commentBtn .x-button-icon {
+	background-image:url(../images/approve_comment.png);
 	background-repeat:no-repeat;
 	width: 32px !important;
 	height: 32px !important;

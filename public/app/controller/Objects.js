@@ -18,6 +18,9 @@ Ext.define('m3s.controller.Objects', {
             '#objectBackButton': {
                 tap: 'doObjectBack'
             },
+            '#objectCommentButton': {
+            	tap: 'onCommentsTap'
+            },
             '#fbProfilePic': {
                 tap: 'onProfileTap'
             },

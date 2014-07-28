@@ -25,9 +25,9 @@ Ext.define('m3s.view.Detail', {
                     },
                     {
                         xtype: 'button',
-                        cls: 'shareBtn',
-                        iconCls: 'shareBtn',
-                        id: 'objectShareButton',
+                        cls: 'commentBtn',
+                        iconCls: 'commentBtn',
+                        id: 'objectCommentButton',
                         align: 'right'
                     }
                 ]
