@@ -4,6 +4,10 @@ Ext.define('m3s.view.Notes', {
     
     xtype: 'notes',
     
+    layout: {
+        type: 'vbox'
+    },
+    
     id: 'notes',
     
     config: {
