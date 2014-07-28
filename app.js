@@ -1,14 +1,14 @@
-var    express = require('express'),
-             _ = require('underscore'),
-    connection = require('./lib/db').conn,
-        config = require('./config').config,
-       connect = require('connect'),
-          json = require('json-component'),
-         merge = require('merge'),
-            fb = require('./lib/facebook'),
-         graph = require('fbgraph'),
-   handleError = require('./lib/error').handleError,
-    ObjectDump = require('objectdump');
+var     express = require('express'),
+              _ = require('underscore'),
+     connection = require('./lib/db').conn,
+         config = require('./config').config,
+        connect = require('connect'),
+           json = require('json-component'),
+          merge = require('merge'),
+             fb = require('./lib/facebook'),
+          graph = require('fbgraph'),
+    handleError = require('./lib/error').handleError,
+stringifyObject = require('stringify-object');
 
 var app = module.exports = express.createServer();
 
@@ -62,8 +62,16 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 });
 
 app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+	
 	console.log('______________  Start ____________________');
-	console.log(JSON.stringify(req));
+	
+	var pretty = stringifyObject(req, {
+	    indent: '  ',
+	    singleQuotes: false
+	});
+
+	console.log(pretty);
+	
 	console.log('______________  End ______________________');
 });
 
