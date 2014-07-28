@@ -8,8 +8,7 @@ Ext.define('m3s.controller.Objects', {
         	objectList: 'objectList',
         	titlebar: 'objectDetail titlebar',
         	main: 'main',
-        	loggedOut: 'loggedOut',
-        	notes: 'notes'
+        	loggedOut: 'loggedOut'
         },
 
         control: {
@@ -73,8 +72,6 @@ Ext.define('m3s.controller.Objects', {
             });
         }
         
-        var mynotes = Ext.getCmp('notes');
-        mynotes.refresh();
     },
 
     initContainer: function() {
