@@ -8,7 +8,8 @@ Ext.define('m3s.controller.Objects', {
         	objectList: 'objectList',
         	titlebar: 'objectDetail titlebar',
         	main: 'main',
-        	loggedOut: 'loggedOut'
+        	loggedOut: 'loggedOut',
+        	objectDetail: 'objectDetail'
         },
 
         control: {
@@ -172,10 +173,10 @@ Ext.define('m3s.controller.Objects', {
         }
     },
     
-    onSubmitTap: function(record) {
-    	console.log(record);
+    onSubmitTap: function() {
+    	console.log(getObjectDetail());
     	var txt = Ext.getCmp('txtComment');
-    	console.log(txt);
+    	console.log(txt.getValue());
     }
     
 });
