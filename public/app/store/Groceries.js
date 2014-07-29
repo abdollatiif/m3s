@@ -14,9 +14,6 @@ Ext.define('m3s.store.Groceries', {
         },
         
         autoLoad: true,
-        
-        root: {
-            text:'some root'
-        }
+
     }
 });
