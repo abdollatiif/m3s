@@ -72,6 +72,8 @@ Ext.define('m3s.controller.Objects', {
             });
         }
         
+        var obj = document.getElementById("notes")
+        obj.style.display = ' ';
     },
 
     initContainer: function() {
