@@ -27,13 +27,6 @@ Ext.define('m3s.view.Notes', {
         },
         
         listeners: {
-        	
-        	initialize: function() {
-                var store = this.getStore();
-                store.addListener("refresh", function() {
-                    this.refresh();
-                }, this);
-            },
             
             leafitemtap: function(nestedList, list, index, target, record) {
                 var detailCard = nestedList.getDetailCard();
