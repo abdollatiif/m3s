@@ -72,13 +72,13 @@ Ext.define('m3s.controller.Objects', {
             });
         }
         
-        var obj = document.getElementById("notes")
-        obj.style.display = ' ';
+        //var obj = document.getElementById("notes")
+        //obj.style.display = ' ';
     },
 
     initContainer: function() {
         if (!this.mainContainer) {
-            this.mainContainer = Ext.Viewport.add(Ext.create('m3s.view.Main'));
+            this.mainContainer = Ext.Viewport.add(Ext.create('m3s.view.Notes'));
         }
     },
 
