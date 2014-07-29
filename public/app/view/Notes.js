@@ -23,15 +23,21 @@ Ext.define('m3s.view.Notes', {
         cls: 'nestedArticles',
         
         detailCard: {
-            xtype: 'objectDetail'
-        }/*,
+            html: 'some html text'
+        },
         
         listeners: {
             
             leafitemtap: function(nestedList, list, index, target, record) {
-                var detailCard = nestedList.getDetailCard();
-                detailCard.setHtml('You selected: ' + record.get('text'));
+            	
+            	 if (!this.objectDetailCmp) {
+                     this.objectDetailCmp = Ext.widget('objectDetail');
+                     console.log(this.objectDetailCmp);
+                 }
+
+                //var detailCard = nestedList.getDetailCard();
+                //detailCard.setHtml('You selected: ' + record.get('text'));
             }
-        }*/
+        }
     }
 });
