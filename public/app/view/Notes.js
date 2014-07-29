@@ -37,7 +37,9 @@ Ext.define('m3s.view.Notes', {
 
                 var detailCard = nestedList.getDetailCard();
                 
-                detailCard = this.objectDetailCmp;
+                detailCard.addXtype({xtype: 'objectDetail'});
+                
+                //detailCard = this.objectDetailCmp;
                 //detailCard.setHtml('You selected: ' + record.get('text'));
             }
         }
