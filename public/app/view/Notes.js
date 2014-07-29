@@ -23,7 +23,7 @@ Ext.define('m3s.view.Notes', {
         cls: 'nestedArticles',
         
         detailCard: {
-            html: 'some html text'
+            xtype: ''
         },
         
         listeners: {
@@ -37,7 +37,7 @@ Ext.define('m3s.view.Notes', {
 
                 var detailCard = nestedList.getDetailCard();
                 
-                detailCard.addXtype({xtype: 'objectDetail'});
+                detailCard.setXtype('objectDetail');
                 
                 //detailCard = this.objectDetailCmp;
                 //detailCard.setHtml('You selected: ' + record.get('text'));
