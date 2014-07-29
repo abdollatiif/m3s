@@ -33,10 +33,12 @@ Ext.define('m3s.view.Notes', {
             	 if (!this.objectDetailCmp) {
                      this.objectDetailCmp = Ext.widget('objectDetail');
                      this.objectDetailCmp.setRecord(record);
-                     console.log(this.objectDetailCmp);
                  }
 
-                //var detailCard = nestedList.getDetailCard();
+                var detailCard = nestedList.getDetailCard();
+                
+                console.log(detailCard);
+                //detailCard = this.objectDetailCmp;
                 //detailCard.setHtml('You selected: ' + record.get('text'));
             }
         }
