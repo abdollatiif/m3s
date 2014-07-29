@@ -7,15 +7,28 @@ Ext.define('m3s.view.Notes', {
     id: 'notes',
     
     config: {
+    	
         fullscreen: true,
+        
         title: 'Articles',
+        
         listConfig          : {
             itemTpl: '{text}'
         }, 
-        detailCard: {
-            html: 'You can see detail information here! <i>{text}</i>'
-        },
+        
         store: 'Groceries',
-        cls: 'nestedArticles'
+        
+        cls: 'nestedArticles',
+        
+        detailCard: {
+            html: 'You are viewing the detail card!'
+        },
+        
+        listeners: {
+            leafitemtap: function(nestedList, list, index, target, record) {
+                var detailCard = nestedList.getDetailCard();
+                detailCard.setHtml('You selected: ' + record.get('text'));
+            }
+        }
     }
 });
