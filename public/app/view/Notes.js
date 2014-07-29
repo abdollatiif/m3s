@@ -10,6 +10,8 @@ Ext.define('m3s.view.Notes', {
     	
         fullscreen: true,
         
+        variableHeights: true,
+        
         title: 'Articles',
         
         listConfig          : {
