@@ -32,6 +32,7 @@ Ext.define('m3s.view.Notes', {
             	
             	 if (!this.objectDetailCmp) {
                      this.objectDetailCmp = Ext.widget('objectDetail');
+                     this.objectDetailCmp.setRecord(record);
                      console.log(this.objectDetailCmp);
                  }
 
