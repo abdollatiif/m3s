@@ -4,6 +4,8 @@ Ext.define('m3s.view.Detail', {
     
     xtype: 'objectDetail',
     
+    id: 'objectDetail',
+    
     requires: ['Ext.form.*'],
     
 	config: {
