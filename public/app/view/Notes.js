@@ -16,14 +16,15 @@ Ext.define('m3s.view.Notes', {
             	   xtype: 'component',
     		       cls: 'fbProfilePic',
     		       id: 'fbProfilePic',
-    		       tpl: '<img src="https://graph.facebook.com/{profileId}/picture?type=square" />'
+    		       tpl: '<img src="https://graph.facebook.com/{profileId}/picture?type=square" />',
+    		       align: 'right'
     		    }
             ]
         },
                 
         title: 'Thesis [abdollatiif@gmail.com]',
         
-        listConfig          : {
+        listConfig: {
             itemTpl: '{text}'
         }, 
         

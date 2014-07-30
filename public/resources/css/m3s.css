@@ -130,3 +130,24 @@ body.splashBg {
 .float-panel {
   position: absolute;
 }
+
+.fbProfilePic {
+	margin-right: 8px;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	top: -5px;
+}
+
+.fbProfilePic img {
+	border: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.x-panel.x-floating .x-panel-inner {
+	z-index: 1;
+	background-color: none; 
+}
