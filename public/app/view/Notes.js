@@ -28,17 +28,7 @@ Ext.define('m3s.view.Notes', {
         
         listeners: {
             
-            leafitemtap: function(nestedList, list, index, target, record) {
-            	
-            	 /*if (!this.objectDetailCmp) {
-                     this.objectDetailCmp = Ext.widget('objectDetail');
-                     this.objectDetailCmp.setRecord(record);
-                 }
-
-                var detailCard = nestedList.getDetailCard();
-                
-                detailCard.setXtype('objectDetail');*/
-            	
+            leafitemtap: function(nestedList, list, index, target, record) {          	
             	var detail = Ext.getCmp('objectDetail');
             	detail.setRecord(record);
                 

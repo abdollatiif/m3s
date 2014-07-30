@@ -92,7 +92,7 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 
 app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 
-    var url = "http://ism.ma/nested.php";
+    var url = "http://ism.ma/object.php?method=getTree&seq=2";
 
     rest.get(
         url, { parser: rest.parsers.json }
