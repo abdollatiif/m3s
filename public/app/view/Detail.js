@@ -14,27 +14,6 @@ Ext.define('m3s.view.Detail', {
 
         items: [
             {
-                docked: 'top',
-                xtype: 'titlebar',
-                cls: 'small',
-                items: [
-                    {
-                        xtype: 'button',
-                        cls: 'backBtn',
-                        iconCls: 'backBtn',
-                        id: 'objectBackButton',
-                        align: 'left'
-                    },
-                    {
-                        xtype: 'button',
-                        cls: 'commentBtn',
-                        iconCls: 'commentBtn',
-                        id: 'objectCommentButton',
-                        align: 'right'
-                    }
-                ]
-            },
-            {
             	 xtype: 'toolbar',
                  docked: 'bottom',
                  items: [

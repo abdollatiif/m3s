@@ -18,9 +18,6 @@ Ext.define('m3s.controller.Objects', {
             '#objectBackButton': {
                 tap: 'doObjectBack'
             },
-            '#objectCommentButton': {
-            	tap: 'onCommentsTap'
-            },
             '#fbProfilePic': {
                 tap: 'onProfileTap'
             },
@@ -198,10 +195,6 @@ Ext.define('m3s.controller.Objects', {
             },
             scope: this
         });
-    },
-    
-    onCommentsTap: function(rec) {
-    	console.log(rec);
     }
     
 });
