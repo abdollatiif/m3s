@@ -38,8 +38,9 @@ Ext.define('m3s.view.Notes', {
             
             leafitemtap: function(nestedList, list, index, target, record) {          	
             	var detail = Ext.getCmp('objectDetail');
-            	console.log(detail);
+            	console.log(record);
             	detail.setRecord(record);
+            	m3s.currentObject = record;
                 
             }
         }
