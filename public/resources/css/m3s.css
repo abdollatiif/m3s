@@ -130,11 +130,3 @@ body.splashBg {
 .float-panel {
   position: absolute;
 }
-
-#ext-notes-1 {
-	display: block !important;
-}
-
-.nestedArticles {
-	display: block !important;
-}

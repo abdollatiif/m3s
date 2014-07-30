@@ -10,18 +10,25 @@ Ext.define('m3s.view.Notes', {
     	
         fullscreen: true,
         
-        variableHeights: true,
-        
-        title: 'Articles',
+        toolbar: {
+        	items: [
+            	{
+            	   xtype: 'component',
+    		       cls: 'fbProfilePic',
+    		       id: 'fbProfilePic',
+    		       tpl: '<img src="https://graph.facebook.com/{profileId}/picture?type=square" />'
+    		    }
+            ]
+        },
+                
+        title: 'Thesis [abdollatiif@gmail.com]',
         
         listConfig          : {
             itemTpl: '{text}'
         }, 
         
         store: 'Groceries',
-        
-        cls: 'nestedArticles',
-        
+                
         detailCard: {
             xtype: 'objectDetail'
         },
