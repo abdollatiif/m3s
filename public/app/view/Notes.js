@@ -12,12 +12,12 @@ Ext.define('m3s.view.Notes', {
         
         toolbar: {
         	items: [
-				{
+			    {
 					xtype: 'button',
 					align: 'right',
 					id: 'commentsBtn',
 					iconCls: 'commentsBtn'
-				 },
+				},
             	{
             	   xtype: 'component',
     		       cls: 'fbProfilePic',
