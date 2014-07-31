@@ -179,7 +179,7 @@ Ext.define('m3s.controller.Objects', {
             url: '/viewing',
             method: 'POST',
             params: {
-                objectId: m3s.currentObject.data.id,
+                objectId: m3s.currentObject.data.seq,
                 text:   m3s.currentObject.data.text,
                 comment: Ext.getCmp('txtComment').getValue(),
             },
