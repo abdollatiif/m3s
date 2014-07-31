@@ -31,6 +31,7 @@ Ext.define('m3s.view.Notes', {
         title: 'Thesis [abdollatiif@gmail.com]',
         
         listConfig: {
+        	
             itemTpl: '{text}'
         }, 
         
