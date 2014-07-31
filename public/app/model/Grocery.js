@@ -7,6 +7,10 @@ Ext.define('m3s.model.Grocery', {
             	type: 'string'
         	},
         	{
+        		name: 'meta',
+        		type: 'string'
+        	},
+        	{
         		name: 'json',
         		type: 'string'
         	}
