@@ -149,5 +149,5 @@ body.splashBg {
 
 .x-panel.x-floating .x-panel-inner {
 	z-index: 1;
-	background-color: none; 
+	background-color: #030303 !important; 
 }
