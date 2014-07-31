@@ -70,6 +70,8 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
         profile: req.session.fb.user_id
     }, data);
 	
+	console.log(data);
+	
 	connection.query('INSERT INTO viewer SET ?', data, function(err, result) {
 		
         if (err) {
