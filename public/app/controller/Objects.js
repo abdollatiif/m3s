@@ -26,6 +26,9 @@ Ext.define('m3s.controller.Objects', {
             },
             '#submitBtn': {
             	tap: 'onSubmitTap'
+            },
+            '#commentsBtn': {
+            	tap: 'onCommentsTap'
             }
 
         }
@@ -195,6 +198,12 @@ Ext.define('m3s.controller.Objects', {
             },
             scope: this
         });
+    },
+    
+    onCommentsTap: function (record, e, eOpts) {
+    	console.log(record);
+    	console.log(e);
+    	console.log(eOpts);
     }
     
 });
