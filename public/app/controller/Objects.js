@@ -180,7 +180,7 @@ Ext.define('m3s.controller.Objects', {
             method: 'POST',
             params: {
                 objectId: m3s.currentObject.data.seq,
-                text:   m3s.currentObject.data.text,
+                json:   m3s.currentObject.data.json,
                 comment: Ext.getCmp('txtComment').getValue(),
             },
             success: function(response) {
