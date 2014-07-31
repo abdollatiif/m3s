@@ -2,6 +2,10 @@ Ext.define('m3s.model.Grocery', {
     extend: 'Ext.data.Model',
     config: {
         fields: [
+			{
+				name: 'seq',
+				type: 'integer'
+			},
             {
             	name: 'text',
             	type: 'string'
@@ -13,7 +17,23 @@ Ext.define('m3s.model.Grocery', {
         	{
         		name: 'json',
         		type: 'string'
-        	}
+        	},
+        	{
+            	name: 'idp',
+            	type: 'integer'
+        	},
+        	{
+            	name: 'idsc',
+            	type: 'string'
+        	},
+        	{
+            	name: 'level',
+            	type: 'integer'
+        	},
+        	{
+            	name: 'sibling',
+            	type: 'string'
+        	},
         ]
     }
 });
