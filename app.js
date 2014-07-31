@@ -106,8 +106,6 @@ app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, nex
 
         res.json(data);
         
-        //console.log(data);
-
     })
     .on('error', function(err) {
         console.log('Error getting Articles', err);
