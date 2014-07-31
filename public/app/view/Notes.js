@@ -16,7 +16,7 @@ Ext.define('m3s.view.Notes', {
 					xtype: 'button',
 					align: 'right',
 					id: 'commentsBtn',
-					cls: 'commentsBtn'
+					iconCls: 'commentsBtn'
 				 },
             	{
             	   xtype: 'component',
