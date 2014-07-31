@@ -10,7 +10,7 @@
 	height: 32px !important;
 }
 
-.x-button.commentsBtn .x-button-icon {
+.commentsBtn {
 	background-image:url(../images/minimalistica/comments.png);
 	background-repeat:no-repeat;
 	width: 32px !important;
