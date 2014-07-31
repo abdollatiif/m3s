@@ -31,7 +31,8 @@ Ext.application({
        'LoggedOut',
        'Main',
        'Detail',
-       'Dialog'
+       'Dialog',
+       'comments'
     ],
     
     controllers: [
