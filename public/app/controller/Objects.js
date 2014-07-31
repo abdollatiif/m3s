@@ -200,10 +200,26 @@ Ext.define('m3s.controller.Objects', {
         });
     },
     
-    onCommentsTap: function (record, e, eOpts) {
-    	console.log(record);
-    	console.log(e);
-    	console.log(eOpts);
+    onCommentsTap: function () {
+    	
+    	 if (!this.comments) {
+             this.comments = Ext.create('m3s.view.Comments');
+         }
+
+         var comments = this.comments;
+
+         if (this.getProfile() == "phone") {
+        	 comments.setWidth(null);
+        	 comments.setHeight('85%');
+        	 comments.setTop(null);
+        	 comments.setLeft(0);
+         }
+
+         if (!comments.getParent()) {
+             Ext.Viewport.add(comments);
+         }
+
+         comments.show();
     }
     
 });
