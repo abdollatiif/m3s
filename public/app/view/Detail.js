@@ -37,7 +37,7 @@ Ext.define('m3s.view.Detail', {
         ],
         
         tpl: Ext.create('Ext.XTemplate',
-        		'<div>{json}</div>'       
+        		'<div>{text}</div>'       
         )
     }
 });
