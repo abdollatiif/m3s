@@ -3,6 +3,8 @@ Ext.define('m3s.controller.Objects', {
     extend: 'Ext.app.Controller',
     
     config: {
+    	
+    	profile: Ext.os.deviceType.toLowerCase(),
 
         refs: {
         	objectList: 'objectList',
@@ -211,6 +213,7 @@ Ext.define('m3s.controller.Objects', {
     onCommentsTap: function () {
     	
     	console.log(m3s);
+    	console.log(Ext);
     	
     	 if (!this.comments) {
              this.comments = Ext.create('m3s.view.Comments');
