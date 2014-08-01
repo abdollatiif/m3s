@@ -10,7 +10,7 @@ Ext.define('m3s.store.Comments', {
         
         grouper: {
             groupFn: function(record) {
-            	return record.get('date');
+            	return Ext.Date.format(record.get('date'), 'd M, Y');
             }
         },
         
