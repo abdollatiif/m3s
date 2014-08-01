@@ -119,7 +119,7 @@ app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next
 	
 	var data = { comments: []};
 	
-	connection.query('SELECT * from viewer WHERE profile = ?', req.session.fb.user_id,  function(err, comments, fields) {	
+	connection.query('SELECT * from viewer WHERE profile = ?', [req.session.fb.user_id],  function(err, comments, fields) {	
 		
 	    _.each(comments, function(comment) {	    	
 	    	var jsonf = json.parse(comment.json);
