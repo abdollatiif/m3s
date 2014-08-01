@@ -32,7 +32,7 @@ Ext.application({
        'Main',
        'Detail',
        'Dialog',
-       'comments'
+       'Comments'
     ],
     
     controllers: [
