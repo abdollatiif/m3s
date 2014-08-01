@@ -3,7 +3,8 @@ Ext.define('m3s.view.Comments', {
     xtype: 'comments',
 
     requires: [
-        'Ext.carousel.Carousel'
+        'Ext.carousel.Carousel',
+        'm3s.view.CommentsList'
     ],
 
     config: {

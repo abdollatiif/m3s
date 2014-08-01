@@ -1,8 +1,12 @@
 Ext.define('m3s.store.Comments', {
 	
 	extend  : 'Ext.data.Store',
+	
+	requires: [
+	    'Ext.data.proxy.JsonP',
+	],
     
-config: {
+	config: {
     	
         model: 'm3s.model.Comment',
         
