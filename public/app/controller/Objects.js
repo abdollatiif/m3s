@@ -15,6 +15,9 @@ Ext.define('m3s.controller.Objects', {
         	objectList: {
                 tapObject: 'onObjectTap'
             },
+            commentsList: {
+            	tapCommentsList: 'onCommentsListTap'
+            },
             '#objectBackButton': {
                 tap: 'doObjectBack'
             },
@@ -213,6 +216,12 @@ Ext.define('m3s.controller.Objects', {
          }
 
          comments.show();
+    },
+    
+    onCommentsListTap: function(record,e,eOpts){
+    	console.log(record);
+    	console.log(e);
+    	console.log(eOpts);
     }
     
 });

@@ -115,3 +115,22 @@ app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, nex
 
 });
 
+app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+	
+	var data = { comments: []};
+	
+	connection.query('SELECT * from viewer WHERE profile = ?', req.session.fb.user_id,  function(err, comments, fields) {	
+		
+	    _.each(comments, function(comment) {	    	
+	    	var jsonf = json.parse(comment.json);
+	    	var result = merge(comment,jsonf);
+	    	data.comments.push(result);
+	    }); 
+	    
+	    console.log(data);
+	    
+	    res.json(data);
+	});
+
+});
+
