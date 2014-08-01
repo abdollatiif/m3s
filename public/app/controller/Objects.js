@@ -201,7 +201,7 @@ Ext.define('m3s.controller.Objects', {
                 
                 var obj = Ext.StoreMgr.get('Comments').load();
                 
-                //this.getCommentsBtn().setBadgeText(obj.data.getCount());
+                Ext.getCmp('commentsBtn').setBadgeText(obj.data.getCount());
                 
             },
             scope: this
@@ -221,12 +221,8 @@ Ext.define('m3s.controller.Objects', {
          }
          
          var obj = Ext.StoreMgr.get('Comments').load();
-         
-         console.log(obj.data.getCount());
-         
-         //this.getCommentsBtn().setBadgeText(obj.data.getCount());
-         
-         console.log(Ext.getCmp('commentsBtn'));
+                  
+         Ext.getCmp('commentsBtn').setBadgeText(obj.data.getCount());
          
          comments.show();
     },
