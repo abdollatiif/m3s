@@ -6,11 +6,11 @@ Ext.define('m3s.store.Comments', {
     	
         model: 'm3s.model.Comment',
         
-        sorters: 'date',
+        sorters: 'formattedDate',
         
         grouper: {
             groupFn: function(record) {
-            	return record.get('date');
+            	return record.get('formattedDate');
             }
         },
         
