@@ -15,10 +15,10 @@ Ext.define('m3s.model.Comment', {
             	name: 'formattedDate',
                 type: 'date',
                 convert: function(v, record) {
-                	console.log(v);
-                	console.log(record);
                 	var arr = record.data.date.split(/[- :T]/);
-                	console.log(arr.toString());
+                	var date = new Date(arr[0], arr[1], arr[2]);
+                	
+                	return Ext.Date.format(date, 'M j, Y');
                 }
             }
         ]
