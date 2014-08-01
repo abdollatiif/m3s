@@ -17,8 +17,8 @@ Ext.define('m3s.model.Comment', {
                 convert: function(v, record) {
                 	console.log(v);
                 	console.log(record);
-                	//var arr = record.data.date.split(/[- :T]/);
-                	//console.log(arr.toString());
+                	var arr = record.data.date.split(/[- :T]/);
+                	console.log(arr.toString());
                 }
             }
         ]
