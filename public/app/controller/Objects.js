@@ -226,7 +226,7 @@ Ext.define('m3s.controller.Objects', {
          
          //this.getCommentsBtn().setBadgeText(obj.data.getCount());
          
-         console.log(this.getCommentsBtn());
+         console.log(Ext.getCmp('CommentsBtn'));
          
          comments.show();
     },
