@@ -220,7 +220,7 @@ Ext.define('m3s.controller.Objects', {
          
          var obj = Ext.StoreMgr.get('Comments').load();
          
-         console.log(obj);
+         console.log(obj.data.getCount());
          
          comments.show();
     },
