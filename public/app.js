@@ -19,12 +19,14 @@ Ext.application({
     
     models: [
        'Object',
-       'Grocery'
+       'Grocery',
+       'Comment'
     ],
 
     stores: [
        'Objects',
-       'Groceries'
+       'Groceries',
+       'Comments'
     ],
 
     views: [
