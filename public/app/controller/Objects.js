@@ -208,13 +208,6 @@ Ext.define('m3s.controller.Objects', {
 
          var comments = this.comments;
 
-         if (this.getProfile() == "phone") {
-        	 comments.setWidth(null);
-        	 comments.setHeight('85%');
-        	 comments.setTop(null);
-        	 comments.setLeft(0);
-         }
-
          if (!comments.getParent()) {
              Ext.Viewport.add(comments);
          }
