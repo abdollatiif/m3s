@@ -151,3 +151,15 @@ body.splashBg {
 	z-index: 1;
 	background-color: #030303 !important; 
 }
+
+.x-hasbadge .x-badge {
+	top: -1px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+}
+
+.x-toolbar .x-button .x-badge{
+	font-size: 10px;
+}
