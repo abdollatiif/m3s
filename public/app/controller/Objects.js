@@ -218,7 +218,9 @@ Ext.define('m3s.controller.Objects', {
              Ext.Viewport.add(comments);
          }
          
-         Ext.StoreMgr.get('Comments').load()
+         var obj = Ext.StoreMgr.get('Comments').load();
+         
+         console.log(obj);
          
          comments.show();
     },
