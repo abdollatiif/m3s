@@ -6,7 +6,7 @@ Ext.define('m3s.controller.Objects', {
 
         refs: {
         	objectList: 'objectList',
-        	titlebar: 'objectDetail titlebar',
+        	commentsBtn: 'notes commentsBtn',
         	main: 'main',
         	loggedOut: 'loggedOut'
         },
@@ -199,7 +199,9 @@ Ext.define('m3s.controller.Objects', {
                 
                 Ext.getCmp('txtComment').reset();
                 
-                Ext.StoreMgr.get('Comments').load()
+                var obj = Ext.StoreMgr.get('Comments').load();
+                
+                //this.getCommentsBtn().setBadgeText(obj.data.getCount());
                 
             },
             scope: this
@@ -221,6 +223,10 @@ Ext.define('m3s.controller.Objects', {
          var obj = Ext.StoreMgr.get('Comments').load();
          
          console.log(obj.data.getCount());
+         
+         //this.getCommentsBtn().setBadgeText(obj.data.getCount());
+         
+         console.log(this.getCommentsBtn());
          
          comments.show();
     },
