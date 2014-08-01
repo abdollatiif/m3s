@@ -67,12 +67,9 @@
 
 .x-msgbox .x-button-close, .dialog .x-button-close {
   position: absolute;
-  width: 25px;
-  height: 26px;
-  background: url("../images/icon-sprites.png") no-repeat;
-  background-size: 219px 76px;
-  background-position-x: -193px;
-  background-position-y: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../images/symbolize/delete.png) no-repeat;
   top: -17px;
   right: -15px;
 }
@@ -162,4 +159,9 @@ body.splashBg {
 
 .x-toolbar .x-button .x-badge{
 	font-size: 10px;
+}
+
+.x-msgbox, .dialog {
+	max-height: 100px;
+	min-height: 100px;
 }
