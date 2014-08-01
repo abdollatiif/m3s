@@ -210,7 +210,7 @@ Ext.define('m3s.controller.Objects', {
     
     onCommentsTap: function () {
     	
-    	console.log(this);
+    	console.log(m3s);
     	
     	 if (!this.comments) {
              this.comments = Ext.create('m3s.view.Comments');
