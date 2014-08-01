@@ -198,6 +198,7 @@ Ext.define('m3s.controller.Objects', {
                 }
                 
                 Ext.getCmp('txtComment').reset();
+                
             },
             scope: this
         });
@@ -207,6 +208,8 @@ Ext.define('m3s.controller.Objects', {
     	
     	 if (!this.comments) {
              this.comments = Ext.create('m3s.view.Comments');
+         }else{
+        	 this.comments.refresh();
          }
 
          var comments = this.comments;

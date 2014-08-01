@@ -1,6 +1,7 @@
 Ext.define('m3s.view.Comments', {
     extend: 'Ext.Panel',
     xtype: 'comments',
+    id: 'commentsPanel',
 
     requires: [
         'Ext.carousel.Carousel',
