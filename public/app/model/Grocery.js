@@ -11,6 +11,10 @@ Ext.define('m3s.model.Grocery', {
             	type: 'string'
         	},
         	{
+        		name: 'content',
+            	type: 'string'
+        	},
+        	{
         		name: 'meta',
         		type: 'string'
         	},
