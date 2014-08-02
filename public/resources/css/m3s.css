@@ -184,3 +184,12 @@ p{
 	margin: 7px;
 	text-align: justify;
 }
+
+pre{
+	line-height: 1.3em;
+	color: black;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 1em;
+	font-family: monospace,Courier;
+}
