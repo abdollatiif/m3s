@@ -4,6 +4,11 @@ Ext.define('m3s.view.Form', {
     	
     xtype: 'objectForm',
     
+    requires: [
+       'Ext.field.Email',
+       'Ext.field.Password'
+    ],
+    
     config: {
     	
     	items: [{
