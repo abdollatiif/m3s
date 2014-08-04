@@ -35,7 +35,8 @@ Ext.application({
        'Main',
        'Detail',
        'Dialog',
-       'Comments'
+       'Comments',
+       'Form'
     ],
     
     controllers: [

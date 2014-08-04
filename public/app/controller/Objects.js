@@ -265,7 +265,6 @@ Ext.define('m3s.controller.Objects', {
                                 
         this.objectFormCmp.setRecord(data);
     	
-
     }
     
 });
