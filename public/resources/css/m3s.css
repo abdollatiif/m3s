@@ -3,18 +3,12 @@
 	height: 100%;
 }
 
-.x-button.backBtn .x-button-icon {
-	background-image:url(../images/glyphicons/png/glyphicons_380_message_forward.png);
-	background-repeat:no-repeat;
-	width: 32px !important;
-	height: 32px !important;
-}
-
 .commentsBtn {
 	background-image:url(../images/minimalistica/comments.png);
 	background-repeat:no-repeat;
 	width: 32px !important;
 	height: 32px !important;
+	cursor: pointer;
 }
 
 .plusBtn {
@@ -22,6 +16,7 @@
 	background-repeat:no-repeat;
 	width: 32px !important;
 	height: 32px !important;
+	cursor: pointer;
 }
 
 .x-msgbox, .dialog {

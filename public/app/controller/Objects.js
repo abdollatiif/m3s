@@ -243,7 +243,7 @@ Ext.define('m3s.controller.Objects', {
 
     },
     
-    onCommentsListTap: function(record,e,eOpts){
+    onPlusTap: function(record,e,eOpts){
     	console.log(record);
     }
     
