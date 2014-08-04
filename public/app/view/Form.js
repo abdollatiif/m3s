@@ -11,25 +11,49 @@ Ext.define('m3s.view.Form', {
     
     config: {
     	
-    	items: [{
-            xtype: 'fieldset',
-            items: [
-                {
-                    xtype: 'textfield',
-                    name : 'name',
-                    label: 'Name'
-                },
-                {
-                    xtype: 'emailfield',
-                    name : 'email',
-                    label: 'Email'
-                },
-                {
-                    xtype: 'passwordfield',
-                    name : 'password',
-                    label: 'Password'
-                }
-            ]
+    	items: [
+    	 {
+               xtype: 'titlebar',
+               docked: 'top',
+               title: 'Creation new Node',
+               items: [
+                  {
+                	  iconCls: 'arrow_left',
+                	  align: 'left'
+                   }
+               ] 	
+          },
+    	  {
+        	  xtype: 'fieldset',
+        	  items: [
+        	          {
+        	        	  xtype: 'selectfield',
+        	        	  name : 'position',
+        	        	  label: 'Choose Position',
+        	        	  options: [
+        	        	            {text: 'First Position', value: 'first'},
+        	        	            {text: 'Last Position', value: 'last'}
+        	        	  ]
+        	          },
+        	          {
+        	        	  xtype: 'textareafield',
+        	        	  label: 'Meta Data',
+        	        	  maxRows: 4,
+        	        	  name: 'meta'
+        	          },
+        	          {
+        	        	  xtype: 'textareafield',
+        	        	  label: 'Json Object',
+        	        	  maxRows: 4,
+        	        	  name: 'json'
+        	          },
+        	          {
+        	        	  xtype: 'checkboxfield',
+        	        	  name : 'leaf',
+        	        	  label: 'Leaf?',
+        	        	  checked: false
+        	          }
+        	  ]
         }]
         
     }
