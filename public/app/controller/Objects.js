@@ -245,10 +245,10 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onPlusTap: function(record,e,eOpts){
-    	//console.log(this.getNotes().getActiveItem().getStore().getData().items[0].raw);
+    	//console.log(this.getNotes().getActiveItem().getStore().getData().items[0]);
     	
     	Ext.Array.each(this.getNotes().getActiveItem().getStore().getData().items, function(name, index, itemsItSelf) {
-    	    console.log(name.raw);
+    	    console.log(name);
     	});
 
     }
