@@ -17,6 +17,13 @@
 	height: 32px !important;
 }
 
+.plusBtn {
+	background-image:url(../images/minimalistica/add.png);
+	background-repeat:no-repeat;
+	width: 32px !important;
+	height: 32px !important;
+}
+
 .x-msgbox, .dialog {
   min-width: 15em;
   max-width: 20em;

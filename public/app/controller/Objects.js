@@ -34,6 +34,9 @@ Ext.define('m3s.controller.Objects', {
             },
             '#commentsBtn': {
             	tap: 'onCommentsTap'
+            },
+            '#plusBtn': {
+            	tap: 'onPlusTap'
             }
 
         }
@@ -237,9 +240,11 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onCommentsListTap: function(record,e,eOpts){
+
+    },
+    
+    onCommentsListTap: function(record,e,eOpts){
     	console.log(record);
-    	console.log(e);
-    	console.log(eOpts);
     }
     
 });

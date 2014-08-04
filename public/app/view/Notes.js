@@ -12,6 +12,12 @@ Ext.define('m3s.view.Notes', {
         
         toolbar: {
         	items: [
+				{
+					xtype: 'button',
+					align: 'left',
+					id: 'plusBtn',
+					iconCls: 'plusBtn'
+				},
 			    {
 					xtype: 'button',
 					align: 'right',
