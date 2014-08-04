@@ -69,9 +69,7 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 	data = merge({
         profile: req.session.fb.user_id
     }, data);
-	
-	console.log(data);
-	
+		
 	connection.query('INSERT INTO viewer SET ?', data, function(err, result) {
 		
         if (err) {
@@ -126,11 +124,37 @@ app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next
 	    	var result = merge(comment,jsonf);
 	    	data.comments.push(result);
 	    }); 
-	    
-	    console.log(data);
-	    
+	    	    
 	    res.json(data);
 	});
 
+});
+
+app.post('/createObject', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+	
+	var data = req.body;
+	
+	data = merge({
+        profile: req.session.fb.user_id
+    }, data);
+		
+	connection.query('INSERT INTO nested SET ?', data, function(err, result) {
+		
+        if (err) {
+            handleError('Could not save nesting object', err, req, res);
+            return;
+        }
+
+        console.log("Successfully saved new nesting object");
+
+        var resp = { success: true };
+
+        if (req.fbError) {
+            resp.fbError = req.fbError;
+        }
+
+        res.json(resp);
+    });
+	
 });
 

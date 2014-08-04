@@ -10,7 +10,8 @@ Ext.define('m3s.controller.Objects', {
         	objectList: 'objectList',
         	commentsBtn: 'notes commentsBtn',
         	main: 'main',
-        	loggedOut: 'loggedOut'
+        	loggedOut: 'loggedOut',
+        	notes: 'notes'
         },
 
         control: {
@@ -244,7 +245,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onPlusTap: function(record,e,eOpts){
-    	console.log(record);
+    	console.log(this.getNotes());
     }
     
 });
