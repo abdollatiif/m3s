@@ -25,9 +25,8 @@ Ext.define('m3s.view.Form', {
                     label: 'Password'
                 }
             ]
-        }],
+        }]
         
-        record: this.getRecord()
     }
     	
 });
