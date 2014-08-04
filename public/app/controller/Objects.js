@@ -260,7 +260,7 @@ Ext.define('m3s.controller.Objects', {
         
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
             type: 'slide',
-            direction: 'top'
+            direction: 'right'
         });
                                 
         this.objectFormCmp.setRecord(data);
