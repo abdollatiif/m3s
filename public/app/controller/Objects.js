@@ -245,11 +245,26 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onPlusTap: function(record,e,eOpts){
-    	//console.log(this.getNotes().getActiveItem().getStore().getData().items[0]);
     	
-    	Ext.Array.each(this.getNotes().getActiveItem().getStore().getData().items, function(name, index, itemsItSelf) {
-    	    console.log(name);
+    	var data = this.getNotes().getActiveItem();//.getStore().getData().items;
+    	
+    	console.log(data);
+    	
+    	Ext.Array.each(data, function(name, index, itemsItSelf) {
+    	    //console.log(name);
     	});
+    	
+    	if (!this.objectFormCmp) {
+            this.objectFormCmp = Ext.widget('objectForm');
+        }        
+        
+        Ext.Viewport.animateActiveItem(this.objectFormCmp, {
+            type: 'slide',
+            direction: 'top'
+        });
+                                
+        this.objectFormCmp.setRecord(data);
+    	
 
     }
     
