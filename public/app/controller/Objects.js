@@ -245,7 +245,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onPlusTap: function(record,e,eOpts){
-    	console.log(this.getNotes().getActiveItem().getStore().getData());
+    	console.log(this.getNotes().getActiveItem().getStore().getData().items[0].raw);
     }
     
 });
