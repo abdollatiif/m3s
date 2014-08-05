@@ -259,14 +259,14 @@ Ext.define('m3s.controller.Objects', {
     	
     	if (!this.objectFormCmp) {
             this.objectFormCmp = Ext.widget('objectForm');
-        }        
+        }    
+    	
+    	this.objectFormCmp.setRecord(data);
         
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
             type: 'slide',
             direction: 'right'
-        });
-                                
-        this.objectFormCmp.setRecord(data);
+        });                               
     	
     },
     
