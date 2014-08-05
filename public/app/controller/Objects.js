@@ -261,7 +261,7 @@ Ext.define('m3s.controller.Objects', {
             this.objectFormCmp = Ext.widget('objectForm');
         }    
     	
-    	console.log(this.objectFormCmp);
+    	//console.log(this.objectFormCmp);
     	
     	this.objectFormCmp.setData(data);
         
