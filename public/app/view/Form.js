@@ -12,7 +12,7 @@ Ext.define('m3s.view.Form', {
     	
     	listeners: {
             'initialize': function (form, eOpts) {
-            	console.log(form._record);
+            	console.log(form);
             }
         },
     	
