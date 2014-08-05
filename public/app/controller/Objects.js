@@ -259,7 +259,7 @@ Ext.define('m3s.controller.Objects', {
             this.objectFormCmp = Ext.widget('objectForm');
         }    
     	
-    	console.log(this.objectFormCmp.getItems());
+    	console.log(this.objectFormCmp.getInnerItems());
     	
     	this.objectFormCmp.setValues({
     		position: 'last',
