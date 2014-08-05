@@ -249,7 +249,7 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
-    	var data = this.getNotes().getActiveItem();//.getStore().getData().items;
+    	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	
     	//console.log(data);
     	
