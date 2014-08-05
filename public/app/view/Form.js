@@ -10,6 +10,12 @@ Ext.define('m3s.view.Form', {
     
     config: {
     	
+    	listeners: {
+            'initialize': function (form, eOpts) {
+            	console.log(form);
+            }
+        },
+    	
     	items: [
     	 {
                xtype: 'titlebar',

@@ -251,7 +251,7 @@ Ext.define('m3s.controller.Objects', {
     	
     	var data = this.getNotes().getActiveItem();//.getStore().getData().items;
     	
-    	console.log(data);
+    	//console.log(data);
     	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
     	    //console.log(name);
