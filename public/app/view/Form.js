@@ -18,7 +18,8 @@ Ext.define('m3s.view.Form', {
                items: [
                   {
                 	  iconCls: 'arrow_left',
-                	  align: 'left'
+                	  align: 'left',
+                	  id: 'iconBack'
                    }
                ] 	
           },

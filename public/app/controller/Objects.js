@@ -38,6 +38,9 @@ Ext.define('m3s.controller.Objects', {
             },
             '#plusBtn': {
             	tap: 'onPlusTap'
+            },
+            '#iconBack':{
+            	tap: 'onIconBack'
             }
 
         }
@@ -265,6 +268,13 @@ Ext.define('m3s.controller.Objects', {
                                 
         this.objectFormCmp.setRecord(data);
     	
+    },
+    
+    onIconBack: function(){
+    	Ext.Viewport.animateActiveItem(this.getNotes(), {
+            type: 'slide',
+            direction: 'right'
+        });
     }
     
 });
