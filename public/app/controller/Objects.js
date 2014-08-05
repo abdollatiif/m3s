@@ -263,8 +263,13 @@ Ext.define('m3s.controller.Objects', {
     	
     	//console.log(this.objectFormCmp);
     	
-    	this.objectFormCmp.setData(data);
-        
+    	this.objectFormCmp.setValues({
+    		position: 'last',
+    		meta: '{}',
+    		json: '{}',
+    		leaf: true
+    	})
+    	
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
             type: 'slide',
             direction: 'right'

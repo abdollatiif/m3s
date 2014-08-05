@@ -9,15 +9,7 @@ Ext.define('m3s.view.Form', {
     ],
     
     config: {
-    	
-    	listeners: {
-            'initialize': function (form, eOpts) {
-            	//console.log(this);
-            	var data = this.getData();
-            	console.log(data);
-            }
-        },
-    	
+
     	items: [
     	 {
                xtype: 'titlebar',
@@ -28,6 +20,12 @@ Ext.define('m3s.view.Form', {
                 	  iconCls: 'arrow_left',
                 	  align: 'left',
                 	  id: 'iconBack'
+                   },
+                   {
+                 	  align: 'right',
+                 	  id: 'iconSave',
+                 	  ui: 'confirm', 
+                 	  text: 'Save'
                    }
                ] 	
           },
