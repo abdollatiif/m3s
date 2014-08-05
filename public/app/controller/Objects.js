@@ -261,6 +261,8 @@ Ext.define('m3s.controller.Objects', {
             this.objectFormCmp = Ext.widget('objectForm');
         }    
     	
+    	console.log(this.objectFormCmp);
+    	
     	this.objectFormCmp.setRecord(data);
         
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
