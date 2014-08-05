@@ -35,7 +35,7 @@ Ext.define('m3s.view.Form', {
         	          {
         	        	  xtype: 'selectfield',
         	        	  name : 'position',
-        	        	  label: 'Choose Position',
+        	        	  label: 'Choose Next Sibling',
         	        	  options: [
         	        	            {text: 'First Position', value: 'first'},
         	        	            {text: 'Last Position', value: 'last'}
