@@ -168,7 +168,7 @@ app.post('/maxChildSeq', function(req, res ,next){
 	var url = "http://ism.ma/object.php?method=maxChilds&seq="+seq;
 
 	    rest.get(
-	        url, { parser: rest.parsers.json }
+	        url
 	    )
 	    .on('complete', function(data) {
 
