@@ -334,18 +334,20 @@ Ext.define('m3s.controller.Objects', {
     			    success: function(response){    			    	
     			    	if (response.responseText == 'null'){
     			    		seq = m3s.LastNodeSeq + 1;
-    			    		console.log(seq);
+    			    		this.objectFormCmp.setValues({
+    			        		seq: seq
+    			        	});
     			    	}
     			    }
     			});
     		}
     	}else{
-    		seq = newValue;
+    		this.objectFormCmp.setValues({
+        		seq: newValue
+        	});
     	}	
     	
-    	this.objectFormCmp.setValues({
-    		seq: seq
-    	});
+    	
     	
     }
     
