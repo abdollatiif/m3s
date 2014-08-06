@@ -261,12 +261,7 @@ Ext.define('m3s.controller.Objects', {
     	    i++;
     	});
     	
-    	var len = sibling.lenght - 1;
-    	var sib = sibling.substring(0, len);
-    	
-    	console.log(sib);
-    	
-    	sibling = sibling + '}'
+    	sibling = sibling.substring(0, sibling.length - 1) + '}'
     	
     	options[i] = {text: 'Last Position', value: 'last'};
     	
