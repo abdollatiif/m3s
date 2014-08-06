@@ -44,6 +44,9 @@ Ext.define('m3s.controller.Objects', {
             },
             '#iconSave':{
             	tap: 'onIconSave'
+            },
+            '#nextSibling':{
+            	change: 'onChangeNextSibling'
             }
 
         }
@@ -312,6 +315,13 @@ Ext.define('m3s.controller.Objects', {
     	        alert('created node successfully!');
     	    }
     	});
+    },
+    
+    onChangeNextSibling: function(self, newValue, oldValue, eOpts){
+    	console.log(self);
+    	console.log(newValue);
+    	console.log(oldValue);
+    	console.log(eOpts);
     }
     
 });

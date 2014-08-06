@@ -137,11 +137,7 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
 	data = merge({
         profile: req.session.fb.user_id
     }, data);
-	
-	data = merge({
-        seq: 99
-    }, data);
-	
+
 	console.log(data);
 	
 	/*
