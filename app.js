@@ -161,3 +161,8 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
 	*/
 });
 
+app.post('/maxChildSeq', function(req, res ,next){
+	console.log(req);
+	res.json({"success":true});
+});
+
