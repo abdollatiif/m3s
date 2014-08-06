@@ -162,7 +162,28 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
 });
 
 app.post('/maxChildSeq', function(req, res ,next){
-	console.log(req.body.seq);
-	res.json({"success":true});
+	
+	var seq = req.body.seq;
+	
+	var url = "http://ism.ma/object.php?method=maxChilds&seq="+seq;
+
+	    rest.get(
+	        url, { parser: rest.parsers.json }
+	    )
+	    .on('complete', function(data) {
+
+	        if (data.error) {
+	            res.json({success: false, error: data.error});
+	            return;
+	        }
+	        
+	        console.log(data);
+	        res.json(data);
+	        
+	    })
+	    .on('error', function(err) {
+	        console.log('Error getting Articles', err);
+	    });
+	    
 });
 
