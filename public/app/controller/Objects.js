@@ -249,17 +249,24 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
+    	var options, i=1;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	    	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
     	    console.log(name.getData());
+    	    options[i] = {text: name.getData().text, value:name.getData().seq};
+    	    i++;
     	});
+    	
+    	options[i] = {text: 'Last Position', value: 'last'};
+    	
+    	console.log(options);
     	
     	if (!this.objectFormCmp) {
             this.objectFormCmp = Ext.widget('objectForm');
         }    
     	
-    	console.log(this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions([{text: 'Last Position', value: 'last'}]));
+    	console.log(this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options));
     	
     	this.objectFormCmp.setValues({
     		position: 'last',
