@@ -130,14 +130,17 @@ app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next
 
 });
 
-app.post('/createObject', fb.checkSession, fb.getUserDetails, function(req, res, next) {
+app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 	
 	var data = req.body;
 	
 	data = merge({
         profile: req.session.fb.user_id
     }, data);
-		
+	
+	console.log(data);
+	
+	/*
 	connection.query('INSERT INTO nested SET ?', data, function(err, result) {
 		
         if (err) {
@@ -155,6 +158,6 @@ app.post('/createObject', fb.checkSession, fb.getUserDetails, function(req, res,
 
         res.json(resp);
     });
-	
+	*/
 });
 

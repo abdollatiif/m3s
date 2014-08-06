@@ -41,6 +41,9 @@ Ext.define('m3s.controller.Objects', {
             },
             '#iconBack':{
             	tap: 'onIconBack'
+            },
+            '#iconSave':{
+            	tap: 'onIconSave'
             }
 
         }
@@ -249,13 +252,14 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
-    	var options=[], i=0, idp, sibling='{', level;
+    	var options=[], i=0, idp, sibling='{', level, meta;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	    	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
     	    console.log(name.getData());
     	    idp = name.getData().idp;
     	    level = name.getData().level;
+    	    meta = name.getData().meta;
     	    sibling = sibling + '"' + i + '":"' + name.getData().seq + '",';
     	    options[i] = {text: name.getData().text, value:name.getData().seq};
     	    i++;
@@ -280,7 +284,8 @@ Ext.define('m3s.controller.Objects', {
     		leaf: false,
     		sibling: sibling,
     		idp: idp,
-    		level: level
+    		level: level,
+    		meta: meta
     	})
     	
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
@@ -295,6 +300,19 @@ Ext.define('m3s.controller.Objects', {
             type: 'slide',
             direction: 'right'
         });
+    },
+    
+    onIconSave: function(){
+    	if (!this.objectFormCmp)
+    		return;
+    	
+    	this.objectFormCmp.submit({
+    	    url: '/createNode',
+    	    method: 'POST',
+    	    success: function() {
+    	        alert('created node successfully!');
+    	    }
+    	});
     }
     
 });
