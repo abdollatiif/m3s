@@ -249,14 +249,18 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
-    	var options=[], i=0;
+    	var options=[], i=0, idp, sibling='{';
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	    	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
     	    console.log(name.getData());
+    	    idp = name.getData().idp;
+    	    sibling = sibling + '"' + i + '":' + name.getData().seq + ',';
     	    options[i] = {text: name.getData().text, value:name.getData().seq};
     	    i++;
     	});
+    	
+    	sibling = sibling.substring(0,sibling.lenght - 1) +'}'
     	
     	options[i] = {text: 'Last Position', value: 'last'};
     	
@@ -272,7 +276,9 @@ Ext.define('m3s.controller.Objects', {
     		position: 'last',
     		meta: '{"text":""}',
     		json: '{"text":""}',
-    		leaf: false
+    		leaf: false,
+    		sibling: sibling,
+    		idp: idp 		
     	})
     	
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
