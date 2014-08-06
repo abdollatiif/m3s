@@ -266,6 +266,7 @@ Ext.define('m3s.controller.Objects', {
     	    options[i] = {text: name.getData().text, value:name.getData().seq};
     	    i++;
     	    m3s.currentIsLastNodeLeaf = name.getData().leaf;
+    	    m3s.LastNodeSeq = name.getData().seq;
     	});
     	
     	sibling = sibling.substring(0, sibling.length - 1) + '}'
@@ -322,7 +323,11 @@ Ext.define('m3s.controller.Objects', {
     		return;
     	
     	if (newValue=='last')
-    		console.log(m3s.currentIsLastNodeLeaf);
+    		if(m3s.currentIsLastNodeLeaf){
+    			seq = m3s.LastNodeSeq + 1;
+    		}else{
+    			
+    		}
     	else
     		seq = newValue;
     			
