@@ -259,7 +259,6 @@ Ext.define('m3s.controller.Objects', {
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	    	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
-    	    console.log(name.getData());
     	    idp = name.getData().idp;
     	    level = name.getData().level;
     	    meta = name.getData().meta;
@@ -271,14 +270,12 @@ Ext.define('m3s.controller.Objects', {
     	sibling = sibling.substring(0, sibling.length - 1) + '}'
     	
     	options[i] = {text: 'Last Position', value: 'last'};
-    	
-    	console.log(options);
-    	
+    	    	
     	if (!this.objectFormCmp) {
             this.objectFormCmp = Ext.widget('objectForm');
         }    
     	
-    	console.log(this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options));
+    	this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options);
     	
     	this.objectFormCmp.setValues({
     		position: 'last',
@@ -318,6 +315,13 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onChangeNextSibling: function(self, newValue, oldValue, eOpts){
+    	if (!this.objectFormCmp)
+    		return;
+    	
+    	this.objectFormCmp.setValues({
+    		seq: newValue
+    	});
+    	
     	console.log(self);
     	console.log(newValue);
     	console.log(oldValue);
