@@ -62,29 +62,34 @@ Ext.define('m3s.view.Form', {
         	          {
         	        	  xtype: 'textfield',
         	        	  name : 'seq',
-        	        	  label: 'Sequence'
+        	        	  label: 'Sequence',
+        	        	  disabled: true
         	          },
         	          {
         	        	  xtype: 'textfield',
         	        	  name : 'idp',
-        	        	  label: 'Parent'
+        	        	  label: 'Parent',
+        	        	  disabled: true
         	          },
         	          {
         	        	  xtype: 'textfield',
         	        	  name : 'level',
-        	        	  label: 'Level'
+        	        	  label: 'Level',
+        	        	  disabled: true
         	          },
         	          {
         	        	  xtype: 'textareafield',
         	        	  label: 'Siblings',
         	        	  maxRows: 4,
-        	        	  name: 'sibling'
+        	        	  name: 'sibling',
+        	        	  disabled: true
         	          },
         	          {
         	        	  xtype: 'textareafield',
         	        	  label: 'idsc',
         	        	  maxRows: 4,
-        	        	  name: 'Children'
+        	        	  name: 'Children',
+        	        	  disabled: true
         	          }
         	  ]
         }]
