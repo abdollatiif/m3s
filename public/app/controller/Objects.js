@@ -337,9 +337,8 @@ Ext.define('m3s.controller.Objects', {
     			        		seq: seq
     			        	});
     			    	}else{
-    			    		
-    			    		console.log(response);
-    			    		
+    			    		var data = JSON.parse(response.responseText);
+    			    		console.log(data);    			    		
     			    	}
     			    }
     			});
