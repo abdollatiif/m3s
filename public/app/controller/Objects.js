@@ -336,6 +336,10 @@ Ext.define('m3s.controller.Objects', {
     			    		obj.setValues({
     			        		seq: seq
     			        	});
+    			    	}else{
+    			    		obj.setValues({
+    			        		seq: parseInt(response.responseText)
+    			        	});
     			    	}
     			    }
     			});

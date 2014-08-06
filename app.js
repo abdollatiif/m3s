@@ -59,7 +59,6 @@ app.get('/objects', fb.checkSession, fb.getUserDetails, function(req, res, next)
 	    
 	    res.json(data);
 	});
-
 });
 
 app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next) {
@@ -87,7 +86,6 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 
         res.json(resp);
     });
-	
 });
 
 app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, next) {
@@ -110,7 +108,6 @@ app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, nex
     .on('error', function(err) {
         console.log('Error getting Articles', err);
     });
-
 });
 
 app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next) {
@@ -127,7 +124,6 @@ app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next
 	    	    
 	    res.json(data);
 	});
-
 });
 
 app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, next) {
@@ -177,6 +173,5 @@ app.post('/maxChildSeq', function(req, res ,next){
 	    .on('error', function(err) {
 	        console.log('Error getting Max childs for a node', err);
 	    });
-	    
 });
 
