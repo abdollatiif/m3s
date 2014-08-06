@@ -161,7 +161,6 @@ Ext.define('m3s.controller.Objects', {
     },
 
     onFacebookLogout: function() {
-
         Ext.getBody().addCls('splashBg');
         Ext.Viewport.setActiveItem({ xtype: 'loggedOut' });
 
@@ -337,7 +336,7 @@ Ext.define('m3s.controller.Objects', {
     			        		seq: seq
     			        	});
     			    	}else{
-    			    		var data = JSON.parse(response.responseText);
+    			    		var data = parseInt(JSON.parse(response.responseText)) + 1;
     			    		obj.setValues({
     			        		seq: data
     			        	});   			    		
