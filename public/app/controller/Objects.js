@@ -265,6 +265,7 @@ Ext.define('m3s.controller.Objects', {
     	    sibling = sibling + '"' + i + '":"' + name.getData().seq + '",';
     	    options[i] = {text: name.getData().text, value:name.getData().seq};
     	    i++;
+    	    m3s.currentIsLastNodeLeaf = name.getData().leaf;
     	});
     	
     	sibling = sibling.substring(0, sibling.length - 1) + '}'
@@ -315,17 +316,21 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onChangeNextSibling: function(self, newValue, oldValue, eOpts){
+    	var seq;
+    	
     	if (!this.objectFormCmp)
     		return;
     	
+    	if (newValue=='last')
+    		console.log(m3s.currentIsLastNodeLeaf);
+    	else
+    		seq = newValue;
+    			
     	this.objectFormCmp.setValues({
-    		seq: newValue
+    		seq: seq
     	});
     	
     	console.log(self);
-    	console.log(newValue);
-    	console.log(oldValue);
-    	console.log(eOpts);
     }
     
 });
