@@ -332,10 +332,11 @@ Ext.define('m3s.controller.Objects', {
     			        seq: m3s.LastNodeSeq
     			    },
     			    success: function(response){
-    			    	if (response.responseText == null)
+    			    	if (response.responseText == null){
     			    		seq = m3s.LastNodeSeq + 1;
-    			    	else
-    			    		seq = response.responseText;
+    			    	}else{
+    			    		console.log(response.responseText);
+    			    	}
     			    }
     			});
     		}
