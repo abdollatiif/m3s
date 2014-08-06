@@ -34,7 +34,7 @@ Ext.define('m3s.view.Form', {
         	  items: [
         	          {
         	        	  xtype: 'selectfield',
-        	        	  name : 'position',
+        	        	  name : 'nextSibling',
         	        	  label: 'Choose Next Sibling',
         	        	  options: [
         	        	            {text: 'First Position', value: 'first'},
@@ -58,6 +58,33 @@ Ext.define('m3s.view.Form', {
         	        	  name : 'leaf',
         	        	  label: 'Leaf?',
         	        	  checked: false
+        	          },
+        	          {
+        	        	  xtype: 'textfield',
+        	        	  name : 'seq',
+        	        	  label: 'Sequence'
+        	          },
+        	          {
+        	        	  xtype: 'textfield',
+        	        	  name : 'idp',
+        	        	  label: 'Parent'
+        	          },
+        	          {
+        	        	  xtype: 'textfield',
+        	        	  name : 'level',
+        	        	  label: 'Level'
+        	          },
+        	          {
+        	        	  xtype: 'textareafield',
+        	        	  label: 'Siblings',
+        	        	  maxRows: 4,
+        	        	  name: 'sibling'
+        	          },
+        	          {
+        	        	  xtype: 'textareafield',
+        	        	  label: 'idsc',
+        	        	  maxRows: 4,
+        	        	  name: 'Children'
         	          }
         	  ]
         }]

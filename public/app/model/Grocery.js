@@ -6,6 +6,10 @@ Ext.define('m3s.model.Grocery', {
 				name: 'seq',
 				type: 'integer'
 			},
+			{
+				name: 'nextSibling',
+				type: 'integer'
+			},
             {
             	name: 'text',
             	type: 'string'
