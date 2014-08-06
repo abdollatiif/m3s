@@ -322,15 +322,16 @@ Ext.define('m3s.controller.Objects', {
     	if (!this.objectFormCmp)
     		return;
     	
-    	if (newValue=='last')
+    	if (newValue=='last'){
     		if(m3s.currentIsLastNodeLeaf){
     			seq = m3s.LastNodeSeq + 1;
     		}else{
-    			
+    			seq = 99;
     		}
-    	else
+    	}else{
     		seq = newValue;
-    			
+    	}	
+    	
     	this.objectFormCmp.setValues({
     		seq: seq
     	});
