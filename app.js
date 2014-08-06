@@ -164,7 +164,6 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
 app.post('/maxChildSeq', function(req, res ,next){
 	
 	var seq = req.body.seq;
-	console.log(seq);
 	
 	var url = "http://ism.ma/object.php?method=maxChilds&seq="+seq;
 
@@ -173,7 +172,6 @@ app.post('/maxChildSeq', function(req, res ,next){
 	    )
 	    .on('complete', function(data) {
 	        
-	        console.log(data);
 	        res.json(data);    
 	    })
 	    .on('error', function(err) {
