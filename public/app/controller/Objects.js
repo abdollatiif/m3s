@@ -344,7 +344,6 @@ Ext.define('m3s.controller.Objects', {
     		seq: seq
     	});
     	
-    	//console.log(self);
     }
     
 });
