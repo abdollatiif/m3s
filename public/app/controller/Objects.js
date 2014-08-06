@@ -72,7 +72,6 @@ Ext.define('m3s.controller.Objects', {
             this.onFirstLoad(FB.getUserID());
             this.firstLoad = true;
         }
-    	
     },
     
     onFirstLoad: function(profileId) {
@@ -117,7 +116,6 @@ Ext.define('m3s.controller.Objects', {
         });
                                 
         this.objectDetailCmp.setRecord(record);
-        
     },
     
     doObjectBack: function() {
@@ -250,7 +248,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onCommentsListTap: function(record,e,eOpts){
-
+    	// TO DO
     },
     
     onPlusTap: function(record,e,eOpts){
@@ -293,7 +291,6 @@ Ext.define('m3s.controller.Objects', {
             type: 'slide',
             direction: 'right'
         });                               
-    	
     },
     
     onIconBack: function(){
@@ -322,6 +319,8 @@ Ext.define('m3s.controller.Objects', {
     	if (!this.objectFormCmp)
     		return;
     	
+    	var obj = this.objectFormCmp;
+    	
     	if (newValue=='last'){
     		if(m3s.currentIsLastNodeLeaf){
     			seq = m3s.LastNodeSeq + 1;
@@ -334,7 +333,7 @@ Ext.define('m3s.controller.Objects', {
     			    success: function(response){    			    	
     			    	if (response.responseText == 'null'){
     			    		seq = m3s.LastNodeSeq + 1;
-    			    		this.objectFormCmp.setValues({
+    			    		obj.setValues({
     			        		seq: seq
     			        	});
     			    	}
@@ -342,13 +341,10 @@ Ext.define('m3s.controller.Objects', {
     			});
     		}
     	}else{
-    		this.objectFormCmp.setValues({
+    		obj.setValues({
         		seq: newValue
         	});
     	}	
-    	
-    	
-    	
     }
     
 });
