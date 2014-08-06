@@ -249,18 +249,20 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
-    	var options=[], i=0, idp, sibling='{';
+    	var options=[], i=0, idp, sibling='{', level;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	    	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
     	    console.log(name.getData());
     	    idp = name.getData().idp;
-    	    sibling = sibling + '"' + i + '":' + name.getData().seq + ',';
+    	    level = name.getData().level;
+    	    sibling = sibling + '"' + i + '":"' + name.getData().seq + '",';
     	    options[i] = {text: name.getData().text, value:name.getData().seq};
     	    i++;
     	});
     	
-    	var sib = sibling.substring(0, 5);
+    	var len = sibling.lenght - 1;
+    	var sib = sibling.substring(0, len);
     	
     	console.log(sib);
     	
@@ -282,7 +284,8 @@ Ext.define('m3s.controller.Objects', {
     		json: '{"text":""}',
     		leaf: false,
     		sibling: sibling,
-    		idp: idp 		
+    		idp: idp,
+    		level: level
     	})
     	
         Ext.Viewport.animateActiveItem(this.objectFormCmp, {
