@@ -64,7 +64,7 @@ Ext.define('m3s.view.Form', {
         	        	  xtype: 'textfield',
         	        	  name : 'seq',
         	        	  label: 'Sequence',
-        	        	  disabled: true
+        	        	  hidden: true
         	          },
         	          {
         	        	  xtype: 'textfield',
