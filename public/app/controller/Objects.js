@@ -15,8 +15,8 @@ Ext.define('m3s.controller.Objects', {
         },
 
         control: {
-        	objectList: {
-                tapObject: 'onObjectTap'
+        	notes: {
+        		tapNode: 'onNodeTap'
             },
             commentsList: {
             	tapCommentsList: 'onCommentsListTap'
@@ -96,9 +96,8 @@ Ext.define('m3s.controller.Objects', {
         }
     },
 
-    onObjectTap: function(record) {
-    	m3s.currentObject = record;
-        this.showObject(record);
+    onNodeTap: function(record) {
+    	m3s.currentNode = record;
     },
     
     showObject: function(record) {
@@ -272,6 +271,7 @@ Ext.define('m3s.controller.Objects', {
     		sibling = sibling.substring(0, sibling.length - 1) + '}'
     	}else{
     		console.log(this.getNotes());
+    		console.log(m3s.currentNode);
     	}	
     	
     	options[i+1] = {text: 'Last Position', value: 'last'};

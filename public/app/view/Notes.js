@@ -52,9 +52,12 @@ Ext.define('m3s.view.Notes', {
             leafitemtap: function(nestedList, list, index, target, record) {          	
             	var detail = Ext.getCmp('objectDetail');
             	detail.setRecord(record);
-            	m3s.currentObject = record;
-                
-            }
+            	m3s.currentObject = record;               
+            },
+            
+            itemtap: function(dataview, index, target, record, evt) {
+				this.fireEvent('tapNode', record, Ext.get(evt.target));
+			}
         }
     }
 });
