@@ -321,7 +321,12 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	        console.log('Node created successfully!');
-    	        console.log(Ext.getCmp('notes'));
+    	        Ext.getCmp('notes').getStore().refresh();
+    	        
+    	        Ext.Viewport.animateActiveItem(this.getNotes(), {
+    	            type: 'slide',
+    	            direction: 'right'
+    	        });
     	    }
     	});
     },
