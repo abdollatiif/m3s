@@ -128,33 +128,40 @@ app.get('/comments', fb.checkSession, fb.getUserDetails, function(req, res, next
 
 app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 	
-	var data = req.body;
+	var record = req.body;
 	
-	data = merge({
+	record = merge({
         profile: req.session.fb.user_id
-    }, data);
-
-	console.log(data);
+    }, record);
 	
-	/*
-	connection.query('INSERT INTO nested SET ?', data, function(err, result) {
-		
-        if (err) {
-            handleError('Could not save nesting object', err, req, res);
-            return;
-        }
+	var url = "http://ism.ma/object.php?method=recoverySeqIdp&seq="+record.seq+"&context=Content";
+	rest.get(
+		url, { parser: rest.parsers.json }
+	)
+	.on('complete', function(data) {
+           console.log('Recovery Sequence & Parent successfully');
+           
+           connection.query('INSERT INTO nested SET ?', record, function(err, result) {
+       		
+               if (err) {
+                   handleError('Could not save nesting node', err, req, res);
+                   return;
+               }
 
-        console.log("Successfully saved new nesting object");
+               console.log("Successfully saved new nesting node");
+                                             
+               var resp = { success: true };
 
-        var resp = { success: true };
+               if (req.fbError) {
+                   resp.fbError = req.fbError;
+               }
 
-        if (req.fbError) {
-            resp.fbError = req.fbError;
-        }
-
-        res.json(resp);
-    });
-	*/
+               res.json(resp);
+           });
+	})
+	.on('error', function(err) {
+	        console.log('Error Recevery  Sequence & Parent', err);
+	});
 });
 
 app.post('/maxChildSeq', function(req, res ,next){

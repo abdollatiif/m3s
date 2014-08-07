@@ -307,7 +307,7 @@ Ext.define('m3s.controller.Objects', {
     	    url: '/createNode',
     	    method: 'POST',
     	    success: function() {
-    	        alert('created node successfully!');
+    	        console.log('Node created successfully!');
     	    }
     	});
     },
