@@ -255,21 +255,24 @@ Ext.define('m3s.controller.Objects', {
     	var options=[], i=0, idp, sibling='{', level, meta;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	options[0] = {text: '--Select Next Sibling--', value: null};
-    	  
-    	console.log(data);
+    	      
+    	if (data.length > 0){
     	
-    	Ext.Array.each(data, function(name, index, itemsItSelf) {
-    	    idp = name.getData().idp;
-    	    level = name.getData().level;
-    	    meta = name.getData().meta;
-    	    sibling = sibling + '"' + i + '":"' + name.getData().seq + '",';
-    	    options[i+1] = {text: name.getData().text, value:name.getData().seq};
-    	    i++;
-    	    m3s.currentIsLastNodeLeaf = name.getData().leaf;
-    	    m3s.LastNodeSeq = name.getData().seq;
-    	});
+    		Ext.Array.each(data, function(name, index, itemsItSelf) {
+    			idp = name.getData().idp;
+    			level = name.getData().level;
+    			meta = name.getData().meta;
+    			sibling = sibling + '"' + i + '":"' + name.getData().seq + '",';
+    			options[i+1] = {text: name.getData().text, value:name.getData().seq};
+    			i++;
+    			m3s.currentIsLastNodeLeaf = name.getData().leaf;
+    			m3s.LastNodeSeq = name.getData().seq;
+    		});
     	
-    	sibling = sibling.substring(0, sibling.length - 1) + '}'
+    		sibling = sibling.substring(0, sibling.length - 1) + '}'
+    	}else{
+    		console.log(this.getNotes());
+    	}	
     	
     	options[i+1] = {text: 'Last Position', value: 'last'};
     	    	
