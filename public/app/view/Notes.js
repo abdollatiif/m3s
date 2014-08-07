@@ -60,7 +60,7 @@ Ext.define('m3s.view.Notes', {
 			},
 			
 			activeitemchange: function(self, value, oldValue, eOpts ){
-				console.log(value.getStore().getNode());
+				m3s.currentNode = value.getStore().getNode();
 			}
         }
     }
