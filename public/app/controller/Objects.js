@@ -325,6 +325,10 @@ Ext.define('m3s.controller.Objects', {
     	if (newValue=='last'){
     		if(m3s.currentIsLastNodeLeaf){
     			seq = m3s.LastNodeSeq + 1;
+    			console.log(seq);
+    			obj.setValues({
+            		seq: seq
+            	});
     		}else{
     			Ext.Ajax.request({
     			    url: '/maxChildSeq',
@@ -334,11 +338,13 @@ Ext.define('m3s.controller.Objects', {
     			    success: function(response){    			    	
     			    	if (response.responseText == 'null'){
     			    		seq = m3s.LastNodeSeq + 1;
+    			    		console.log(seq);
     			    		obj.setValues({
     			        		seq: seq
     			        	});
     			    	}else{
     			    		var data = parseInt(JSON.parse(response.responseText)) + 1;
+    			    		console.log(data);
     			    		obj.setValues({
     			        		seq: data
     			        	});   			    		
@@ -347,6 +353,7 @@ Ext.define('m3s.controller.Objects', {
     			});
     		}
     	}else{
+    		console.log(newValue);
     		obj.setValues({
         		seq: newValue
         	});
