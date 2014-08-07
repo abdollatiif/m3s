@@ -251,7 +251,7 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
-    	var options=[], i=0, idp, sibling='{', level, meta, nextSibling=null;
+    	var options=[], i=0, idp, sibling='{', level, meta;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	options[0] = {text: '--Select Next Sibling--', value: null};
     	      
@@ -291,7 +291,7 @@ Ext.define('m3s.controller.Objects', {
     		this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options);}
     	
     	this.objectFormCmp.setValues({
-    		nextSibling:  nextSibling,
+    		nextSibling:  null,
     		json: '{"text":""}',
     		leaf: true,
     		sibling: sibling,
