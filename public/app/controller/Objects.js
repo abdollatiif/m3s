@@ -328,6 +328,9 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onChangeNextSibling: function(self, newValue, oldValue, eOpts){
+    	
+    	console.log("enter onChangeNextSibling");
+    	
     	var seq;
     	
     	if (!this.objectFormCmp)
