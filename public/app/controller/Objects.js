@@ -270,8 +270,7 @@ Ext.define('m3s.controller.Objects', {
     	
     		sibling = sibling.substring(0, sibling.length - 1) + '}'
     	}else{
-    		console.log(this.getNotes());
-    		console.log(m3s.currentNode);
+    		console.log(m3s.currentNode.getRecord().getData());
     	}	
     	
     	options[i+1] = {text: 'Last Position', value: 'last'};
