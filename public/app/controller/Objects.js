@@ -308,6 +308,7 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	        console.log('Node created successfully!');
+    	        console.log(this.getNotes());
     	    }
     	});
     },
