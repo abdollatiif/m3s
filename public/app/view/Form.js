@@ -54,7 +54,7 @@ Ext.define('m3s.view.Form', {
         	        	  xtype: 'checkboxfield',
         	        	  name : 'leaf',
         	        	  label: 'Leaf?',
-        	        	  checked: false
+        	        	  checked: true
         	          },
         	          {
         	        	  xtype: 'textfield',
