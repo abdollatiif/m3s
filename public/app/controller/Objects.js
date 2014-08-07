@@ -326,14 +326,14 @@ Ext.define('m3s.controller.Objects', {
     	    	
     	       Ext.getCmp('notes').getStore().load();
     	       
-    	       console.log(m3s.currentNode);   	       
+    	       //console.log(m3s.currentNode);   	       
     	          	       
     	       Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
     	            type: 'slide',
     	            direction: 'right'
     	        });
     	       
-    	       Ext.getCmp('notes').goToNode(m3s.currentNode);
+    	       //Ext.getCmp('notes').goToNode(m3s.currentNode);
     	    }
     	});
     },
