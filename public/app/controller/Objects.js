@@ -277,7 +277,7 @@ Ext.define('m3s.controller.Objects', {
     	this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options);
     	
     	this.objectFormCmp.setValues({
-    		position: 'last',
+    		position: '',
     		json: '{"text":""}',
     		leaf: true,
     		sibling: sibling,
@@ -308,7 +308,7 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	        console.log('Node created successfully!');
-    	        console.log(this.getNotes());
+    	        Ext.StoreMgr.get('Groceries').refresh();
     	    }
     	});
     },
