@@ -255,7 +255,9 @@ Ext.define('m3s.controller.Objects', {
     	var options=[], i=0, idp, sibling='{', level, meta;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	options[0] = {text: '--Select Next Sibling--', value: null};
-    	    	
+    	  
+    	console.log(data);
+    	
     	Ext.Array.each(data, function(name, index, itemsItSelf) {
     	    idp = name.getData().idp;
     	    level = name.getData().level;
