@@ -90,7 +90,7 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 
 app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 
-    var url = "http://ism.ma/object.php?method=getTree&seq=2";
+    var url = "http://ism.ma/object.php?method=getTree&seq=2&context=Content";
 
     rest.get(
         url, { parser: rest.parsers.json }
@@ -161,7 +161,7 @@ app.post('/maxChildSeq', function(req, res ,next){
 	
 	var seq = req.body.seq;
 	
-	var url = "http://ism.ma/object.php?method=maxChilds&seq="+seq;
+	var url = "http://ism.ma/object.php?method=maxChilds&seq="+seq+"&context=Content";
 
 	    rest.get(
 	        url, { parser: rest.parsers.json }
