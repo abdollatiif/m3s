@@ -251,7 +251,7 @@ Ext.define('m3s.controller.Objects', {
     
     onPlusTap: function(record,e,eOpts){
     	
-    	var options=[], i=0, idp, sibling='{', level, meta;
+    	var options=[], i=0, idp, sibling='{', level, meta, nextSibling=null;
     	var data = this.getNotes().getActiveItem().getStore().getData().items;
     	options[0] = {text: '--Select Next Sibling--', value: null};
     	      
@@ -269,8 +269,9 @@ Ext.define('m3s.controller.Objects', {
     			m3s.currentIsLastNodeLeaf = name.getData().leaf;
     			m3s.LastNodeSeq = name.getData().seq;
     		});
-    	
-    		sibling = sibling.substring(0, sibling.length - 1) + '}'    		    	
+    		
+    		sibling = sibling.substring(0, sibling.length - 1) + '}' 
+    		options[i+1] = {text: 'Last Position', value: 'last'};
     	}else{
     		
     		var currentData = m3s.currentNode.getRecord().getData();
@@ -279,19 +280,18 @@ Ext.define('m3s.controller.Objects', {
     		idp = currentData.seq;
     		sibling = null;
     		m3s.isNewChild=true;
-    		m3s.newChildSeq=currentData.seq + 1;
+    		m3s.newChildSeq=currentData.seq + 1;   		
     	}	
-    	
-    	options[i+1] = {text: 'Last Position', value: 'last'};
     	    	
     	if (!this.objectFormCmp) {
             this.objectFormCmp = Ext.widget('objectForm');
         }    
     	
-    	this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options);
+    	if (data.length > 0){
+    		this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options);}
     	
     	this.objectFormCmp.setValues({
-    		position:  null,
+    		nextSibling:  nextSibling,
     		json: '{"text":""}',
     		leaf: true,
     		sibling: sibling,
