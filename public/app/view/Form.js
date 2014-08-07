@@ -4,6 +4,8 @@ Ext.define('m3s.view.Form', {
     	
     xtype: 'objectForm',
     
+    id: 'objectForm',
+    
     requires: [
        'Ext.field.Select'
     ],

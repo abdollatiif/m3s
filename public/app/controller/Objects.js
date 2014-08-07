@@ -317,7 +317,7 @@ Ext.define('m3s.controller.Objects', {
     	if (!this.objectFormCmp)
     		return;
     	    	
-    	Ext.Viewport.add({
+    	Ext.getCmp('objectForm').add({
     	    masked: {
     	       xtype: 'loadmask',
     	       message: 'Be patient...',
@@ -330,7 +330,7 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	    	
-    	    	Ext.Viewport.setMasked(false);
+    	    	Ext.getCmp('objectForm').setMasked(false);
     	    	
     	    	console.log('Node created successfully!');
     	    	
