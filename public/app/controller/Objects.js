@@ -316,8 +316,14 @@ Ext.define('m3s.controller.Objects', {
     	    	
     	if (!this.objectFormCmp)
     		return;
-    	
-    	Ext.Viewport.setMasked({xtype:'loadmask',message:'be patient ...'});
+    	    	
+    	Ext.Viewport.add({
+    	    masked: {
+    	       xtype: 'loadmask',
+    	       message: 'Be patient...',
+    	       indicator: true
+    	    }
+    	});
         
     	this.objectFormCmp.submit({
     	    url: '/createNode',
@@ -327,7 +333,8 @@ Ext.define('m3s.controller.Objects', {
     	    	Ext.Viewport.setMasked(false);
     	    	
     	    	console.log('Node created successfully!');
-    	        Ext.getCmp('notes').getStore().read();
+    	    	
+    	       // Ext.getCmp('notes').getStore().read();
     	        
     	        Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
     	            type: 'slide',
