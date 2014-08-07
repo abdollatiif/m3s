@@ -330,11 +330,11 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	    	
-    	    	Ext.getCmp('objectForm').setMasked(false);
+    	       Ext.getCmp('objectForm').setMasked(false);
     	    	
-    	    	console.log('Node created successfully!');
+    	       console.log('Node created successfully!');
     	    	
-    	       // Ext.getCmp('notes').getStore().read();
+    	       Ext.getCmp('notes').getStore().load();
     	        
     	        Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
     	            type: 'slide',
