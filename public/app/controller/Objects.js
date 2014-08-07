@@ -256,7 +256,9 @@ Ext.define('m3s.controller.Objects', {
     	options[0] = {text: '--Select Next Sibling--', value: null};
     	      
     	if (data.length > 0){
-    	
+    		
+    		m3s.isNewChild=false;
+    		
     		Ext.Array.each(data, function(name, index, itemsItSelf) {
     			idp = name.getData().idp;
     			level = name.getData().level;
@@ -268,9 +270,16 @@ Ext.define('m3s.controller.Objects', {
     			m3s.LastNodeSeq = name.getData().seq;
     		});
     	
-    		sibling = sibling.substring(0, sibling.length - 1) + '}'
+    		sibling = sibling.substring(0, sibling.length - 1) + '}'    		    	
     	}else{
-    		console.log(m3s.currentNode.getRecord().getData());
+    		
+    		var currentData = m3s.currentNode.getRecord().getData();
+    		meta = currentData.meta;
+    		level = currentData.level + 1;
+    		idp = currentData.seq;
+    		sibling = null;
+    		m3s.isNewChild=true;
+    		m3s.newChildSeq=currentData.seq + 1;
     	}	
     	
     	options[i+1] = {text: 'Last Position', value: 'last'};
@@ -326,41 +335,49 @@ Ext.define('m3s.controller.Objects', {
     	
     	var obj = this.objectFormCmp;
     	
-    	if (newValue=='last'){
-    		if(m3s.currentIsLastNodeLeaf){
-    			seq = m3s.LastNodeSeq + 1;
-    			console.log(seq);
-    			obj.setValues({
-            		seq: seq
-            	});
-    		}else{
-    			Ext.Ajax.request({
-    			    url: '/maxChildSeq',
-    			    params: {
-    			        seq: m3s.LastNodeSeq
-    			    },
-    			    success: function(response){    			    	
-    			    	if (response.responseText == 'null'){
-    			    		seq = m3s.LastNodeSeq + 1;
-    			    		console.log(seq);
-    			    		obj.setValues({
-    			        		seq: seq
-    			        	});
-    			    	}else{
-    			    		var data = parseInt(JSON.parse(response.responseText)) + 1;
-    			    		console.log(data);
-    			    		obj.setValues({
-    			        		seq: data
-    			        	});   			    		
-    			    	}
-    			    }
-    			});
-    		}
+    	if(!m3s.isNewChild){	
+	    	if (newValue=='last'){
+	    		if(m3s.currentIsLastNodeLeaf){
+	    			seq = m3s.LastNodeSeq + 1;
+	    			console.log(seq);
+	    			obj.setValues({
+	            		seq: seq
+	            	});
+	    		}else{
+	    			Ext.Ajax.request({
+	    			    url: '/maxChildSeq',
+	    			    params: {
+	    			        seq: m3s.LastNodeSeq
+	    			    },
+	    			    success: function(response){    			    	
+	    			    	if (response.responseText == 'null'){
+	    			    		seq = m3s.LastNodeSeq + 1;
+	    			    		console.log(seq);
+	    			    		obj.setValues({
+	    			        		seq: seq
+	    			        	});
+	    			    	}else{
+	    			    		var data = parseInt(JSON.parse(response.responseText)) + 1;
+	    			    		console.log(data);
+	    			    		obj.setValues({
+	    			        		seq: data
+	    			        	});   			    		
+	    			    	}
+	    			    }
+	    			});
+	    		}
+	    	}else{
+	    		console.log(newValue);
+	    		obj.setValues({
+	        		seq: newValue
+	        	});
+	    	}
     	}else{
-    		console.log(newValue);
-    		obj.setValues({
-        		seq: newValue
-        	});
-    	}	
+	    	self.setHidden(true);
+	    	console.log(m3s.newChildSeq);
+	    	obj.setValues({
+	    		seq: m3s.newChildSeq
+	    	});
+    	}
     }    
 });
