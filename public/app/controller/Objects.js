@@ -335,6 +335,8 @@ Ext.define('m3s.controller.Objects', {
     	       console.log('Node created successfully!');
     	    	
     	       Ext.getCmp('notes').getStore().load();
+    	       
+    	       console.log(Ext.getCmp('notes').getStore());
     	        
     	        Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
     	            type: 'slide',
