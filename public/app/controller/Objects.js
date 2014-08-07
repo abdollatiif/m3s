@@ -278,7 +278,7 @@ Ext.define('m3s.controller.Objects', {
     	this.objectFormCmp.getInnerItems()[0].getInnerItems()[0].setOptions(options);
     	
     	this.objectFormCmp.setValues({
-    		position: '',
+    		position:  null,
     		json: '{"text":""}',
     		leaf: true,
     		sibling: sibling,
