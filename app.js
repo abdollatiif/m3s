@@ -166,6 +166,7 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
                                                             
                if (req.fbError) {
                    resp.fbError = req.fbError;
+                   res.json(resp);
                }
            });
 	})
