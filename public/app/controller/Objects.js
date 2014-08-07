@@ -321,7 +321,7 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	        console.log('Node created successfully!');
-    	        Ext.StoreMgr.get('Groceries').refresh();
+    	        console.log(Ext.getCmp('notes'));
     	    }
     	});
     },
