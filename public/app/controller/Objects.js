@@ -335,7 +335,8 @@ Ext.define('m3s.controller.Objects', {
     	
     	var obj = this.objectFormCmp;
     	
-    	if(!m3s.isNewChild){	
+    	if(!m3s.isNewChild){
+    		self.setHidden(false);
 	    	if (newValue=='last'){
 	    		if(m3s.currentIsLastNodeLeaf){
 	    			seq = m3s.LastNodeSeq + 1;
