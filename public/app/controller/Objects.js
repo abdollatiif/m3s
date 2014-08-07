@@ -330,10 +330,10 @@ Ext.define('m3s.controller.Objects', {
     	       
     	       console.log(m3s.cNode);   	       
     	          	       
-    	       Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
+    	       /*Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
     	            type: 'slide',
     	            direction: 'right'
-    	        });    	       
+    	        });*/    	       
     	    }
     	});
     },
