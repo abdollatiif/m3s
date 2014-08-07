@@ -316,34 +316,24 @@ Ext.define('m3s.controller.Objects', {
     	    	
     	if (!this.objectFormCmp)
     		return;
-    	    	
-    	Ext.getCmp('objectForm').add({
-    	    masked: {
-    	       xtype: 'loadmask',
-    	       message: 'Be patient...',
-    	       indicator: true
-    	    }
-    	});
         
     	this.objectFormCmp.submit({
     	    url: '/createNode',
     	    method: 'POST',
     	    success: function() {
-    	    	
-    	       Ext.getCmp('objectForm').setMasked(false);
-    	    	
+    	    	    	    	
     	       console.log('Node created successfully!');
     	    	
     	       Ext.getCmp('notes').getStore().load();
     	       
-    	       console.log(m3s.currentNode);
-    	       
-    	       Ext.getCmp('notes').goToNode(m3s.currentNode);
-    	       
-    	       /*Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
+    	       console.log(m3s.currentNode);   	       
+    	          	       
+    	       Ext.Viewport.animateActiveItem(Ext.getCmp('notes'),{
     	            type: 'slide',
     	            direction: 'right'
-    	        });*/
+    	        });
+    	       
+    	       Ext.getCmp('notes').goToNode(m3s.currentNode);
     	    }
     	});
     },
