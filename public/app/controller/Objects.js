@@ -292,7 +292,7 @@ Ext.define('m3s.controller.Objects', {
     	this.objectFormCmp.setValues({
     		nextSibling:  null,
     		json: '{"text":""}',
-    		leaf: true,
+    		leaf: 1,
     		sibling: sibling,
     		idp: idp,
     		level: level,
