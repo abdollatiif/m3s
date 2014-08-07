@@ -57,6 +57,10 @@ Ext.define('m3s.view.Notes', {
             
             itemtap: function(dataview, index, target, record, evt) {
 				this.fireEvent('tapNode', record, Ext.get(evt.target));
+			},
+			
+			activeitemchange: function(self, value, oldValue, eOpts ){
+				console.log(value);
 			}
         }
     }
