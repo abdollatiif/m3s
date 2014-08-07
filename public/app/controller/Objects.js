@@ -313,6 +313,7 @@ Ext.define('m3s.controller.Objects', {
     },
     
     onIconSave: function(){
+    	    	
     	if (!this.objectFormCmp)
     		return;
     	
@@ -321,7 +322,7 @@ Ext.define('m3s.controller.Objects', {
     	    method: 'POST',
     	    success: function() {
     	        console.log('Node created successfully!');
-    	        Ext.getCmp('notes').getStore().refresh();
+    	        console.log(Ext.getCmp('notes').getStore());
     	        
     	        Ext.Viewport.animateActiveItem(this.getNotes(), {
     	            type: 'slide',
