@@ -91,7 +91,6 @@ app.post('/viewing', fb.checkSession, fb.getUserDetails, function(req, res, next
 app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, next) {
 
     var url = "http://ism.ma/object.php?method=getTree&seq=2&context=Content";
-
     rest.get(
         url, { parser: rest.parsers.json }
     )
@@ -102,8 +101,7 @@ app.get('/groceries', fb.checkSession, fb.getUserDetails, function(req, res, nex
             return;
         }
 
-        res.json(data);
-        
+        res.json(data);       
     })
     .on('error', function(err) {
         console.log('Error getting Articles', err);
@@ -139,6 +137,7 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
 		url, { parser: rest.parsers.json }
 	)
 	.on('complete', function(data) {
+		
            console.log('Recovery Sequence & Parent successfully');
            
            connection.query('INSERT INTO nested SET ?', record, function(err, result) {
@@ -149,14 +148,25 @@ app.post('/createNode', fb.checkSession, fb.getUserDetails, function(req, res, n
                }
 
                console.log("Successfully saved new nesting node");
-                                             
-               var resp = { success: true };
-
+               
+               var url = "http://ism.ma/object.php?method=recoverySiblingChildren&context=Content";
+               rest.get(
+                   url, { parser: rest.parsers.json }
+               )
+               .on('complete', function(data) {
+            	   
+            	   console.log("Successfully Recovery Children and Sibling");
+            	   
+            	   var resp = { success: true };
+            	   res.json(resp);            	   
+               })
+               .on('error', function(err) {
+                   console.log('Error Recovery Children and Sibling', err);
+               });
+                                                            
                if (req.fbError) {
                    resp.fbError = req.fbError;
                }
-
-               res.json(resp);
            });
 	})
 	.on('error', function(err) {
