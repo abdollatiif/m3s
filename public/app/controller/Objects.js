@@ -48,7 +48,6 @@ Ext.define('m3s.controller.Objects', {
             '#nextSibling':{
             	change: 'onChangeNextSibling'
             }
-
         }
     },
     
@@ -107,8 +106,7 @@ Ext.define('m3s.controller.Objects', {
         }
 
         this.getTitlebar().setTitle(record.get('title'));
-        
-        
+               
         Ext.Viewport.animateActiveItem(this.objectDetailCmp, {
             type: 'slide',
             direction: 'left'
