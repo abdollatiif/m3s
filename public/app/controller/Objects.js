@@ -7,6 +7,7 @@ Ext.define('m3s.controller.Objects', {
     	profile: Ext.os.deviceType.toLowerCase(),
 
         refs: {
+        	
         	objectList: 'objectList',
         	commentsBtn: 'notes commentsBtn',
         	main: 'main',
