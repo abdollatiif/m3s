@@ -87,9 +87,9 @@ Ext.define('m3s.view.Form', {
         	          },
         	          {
         	        	  xtype: 'textareafield',
-        	        	  label: 'idsc',
+        	        	  label: 'children',
         	        	  maxRows: 4,
-        	        	  name: 'Children',
+        	        	  name: 'idsc',
         	        	  hidden: true
         	          }
         	  ]
